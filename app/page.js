@@ -21,7 +21,7 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-bold leading-[1.05] mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-light leading-[1.05] mb-8">
               <em className="text-brand-coral not-italic font-sans italic">Expert</em> Coaches.
               <br />
               <em className="text-brand-teal not-italic font-sans italic">Supportive</em> community.
@@ -77,7 +77,7 @@ export default function HomePage() {
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Choose Your Path
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-5">
+              <h2 className="text-4xl md:text-5xl font-sans font-light mb-5">
                 Become a <em className="text-brand-teal italic">CollWier</em>
               </h2>
               <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto">
@@ -144,7 +144,7 @@ export default function HomePage() {
               <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Problem
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light mb-6 leading-tight">
                 Growth shouldn&apos;t be a<br />
                 <em className="text-brand-coral italic">lonely journey</em>
               </h2>
@@ -195,7 +195,7 @@ export default function HomePage() {
               <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Solution
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light mb-6 leading-tight">
                 What makes CollWi <em className="text-brand-teal italic">different</em>
               </h2>
               <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto">
@@ -263,7 +263,7 @@ export default function HomePage() {
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Simple & Clear
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-light">
                 How CollWi <em className="text-brand-purple italic">works</em>
               </h2>
             </div>
@@ -294,7 +294,7 @@ export default function HomePage() {
             ].map((step, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="flex items-start gap-6 md:gap-8 p-6 md:p-8 bg-white rounded-2xl shadow-soft card-hover">
-                  <span className="flex-shrink-0 text-3xl md:text-4xl font-sans font-bold text-brand-teal/30">
+                  <span className="flex-shrink-0 text-3xl md:text-4xl font-sans font-light text-brand-teal/30">
                     {step.num}
                   </span>
                   <div>
@@ -333,7 +333,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-light text-white mb-6 leading-tight">
               Ready to start your<br />journey together?
             </h2>
           </FadeIn>

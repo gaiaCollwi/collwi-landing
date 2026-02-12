@@ -81,7 +81,7 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.1] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-light leading-[1.1] mb-8">
               You&apos;re exhausted.
               <br />
               You&apos;re overwhelmed.
@@ -120,7 +120,7 @@ export default function CollWiersPage() {
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-sans font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
                 This is for you <em className="text-brand-teal italic">if&hellip;</em>
               </h2>
             </div>
@@ -141,7 +141,7 @@ export default function CollWiersPage() {
 
           <FadeIn delay={0.3}>
             <div className="mt-14 text-center">
-              <p className="text-2xl md:text-3xl font-sans font-bold">
+              <p className="text-2xl md:text-3xl font-sans font-light">
                 You&apos;re not broken. You&apos;re just carrying too much,{' '}
                 <em className="text-brand-coral italic">alone.</em>
               </p>
@@ -158,7 +158,7 @@ export default function CollWiersPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Real Problem
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-6">
                 It isn&apos;t your life.
                 <br />
                 It&apos;s that you&apos;re living it{' '}
@@ -216,7 +216,7 @@ export default function CollWiersPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Why It Works
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-5 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light mb-5 leading-tight">
                 Why CollWi works when<br />
                 everything else <em className="text-brand-teal italic">hasn&apos;t</em>
               </h2>
@@ -251,7 +251,7 @@ export default function CollWiersPage() {
           </div>
 
           <FadeIn delay={0.3}>
-            <p className="text-center text-2xl md:text-3xl font-sans font-bold mt-16">
+            <p className="text-center text-2xl md:text-3xl font-sans font-light mt-16">
               This isn&apos;t self-help. It&apos;s guided transformation&mdash;
               <em className="text-brand-teal italic">together.</em>
             </p>
@@ -267,7 +267,7 @@ export default function CollWiersPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Getting Started
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-light">
                 How CollWi <em className="text-brand-purple italic">works</em>
               </h2>
             </div>
@@ -282,7 +282,7 @@ export default function CollWiersPage() {
             ].map((step, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 shadow-soft card-hover h-full">
-                  <span className="text-4xl font-sans font-bold text-brand-teal/20 mb-4 block">{step.num}</span>
+                  <span className="text-4xl font-sans font-light text-brand-teal/20 mb-4 block">{step.num}</span>
                   <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                   <p className="text-brand-navy/55 leading-relaxed">{step.desc}</p>
                 </div>
@@ -306,7 +306,7 @@ export default function CollWiersPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-gold/15 text-brand-gold text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Transformation
               </span>
-              <h2 className="text-4xl md:text-5xl font-sans font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-light">
                 What changes when you
                 <br />
                 join <em className="text-brand-teal italic">CollWi</em>
@@ -334,7 +334,7 @@ export default function CollWiersPage() {
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-sans font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
                 You deserve more than{' '}
                 <em className="text-brand-coral italic">&ldquo;fine.&rdquo;</em>
               </h2>
@@ -351,7 +351,7 @@ export default function CollWiersPage() {
 
           <ScaleIn delay={0.2}>
             <div className="bg-white rounded-3xl p-10 md:p-14 shadow-soft-xl border border-gray-100">
-              <p className="text-2xl font-sans font-bold mb-8 text-brand-navy">But here&apos;s the truth:</p>
+              <p className="text-2xl font-sans font-light mb-8 text-brand-navy">But here&apos;s the truth:</p>
               <div className="space-y-5 text-xl text-brand-navy/65 leading-relaxed">
                 <p>
                   You can be grateful <em className="text-brand-teal font-semibold italic">and</em> want more.
@@ -368,7 +368,7 @@ export default function CollWiersPage() {
           </ScaleIn>
 
           <FadeIn delay={0.3}>
-            <p className="text-center text-2xl md:text-3xl font-sans font-bold mt-14 leading-snug">
+            <p className="text-center text-2xl md:text-3xl font-sans font-light mt-14 leading-snug">
               CollWi is where you stop wondering<br />
               &ldquo;is this all there is?&rdquo;<br />
               and start building what comes{' '}
@@ -405,7 +405,7 @@ export default function CollWiersPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-light text-white mb-6 leading-tight">
               Ready to stop carrying<br />it all alone?
             </h2>
           </FadeIn>
