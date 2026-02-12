@@ -27,8 +27,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-jakarta)', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-outfit)', 'system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',

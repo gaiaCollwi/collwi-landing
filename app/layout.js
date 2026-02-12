@@ -1,17 +1,11 @@
-import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './globals.css'
 
-const jakarta = Plus_Jakarta_Sans({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-jakarta',
-  display: 'swap',
-})
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-outfit',
   display: 'swap',
 })
 
@@ -29,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${playfair.variable}`}>
+    <html lang="en" className={outfit.variable}>
       <body className="font-sans overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
