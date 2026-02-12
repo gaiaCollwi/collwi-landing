@@ -15,16 +15,15 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
           <FadeIn delay={0.15}>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-light leading-[1.05] mb-8">
-              You deserve more
+              Your life looks good on paper.
               <br />
-              than <em className="text-brand-coral italic">&ldquo;fine.&rdquo;</em>
+              But you know there&apos;s <em className="text-brand-coral italic">more.</em>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.35}>
             <p className="text-xl md:text-2xl text-brand-navy/55 max-w-2xl mx-auto mb-12 leading-relaxed">
-              Stop carrying everything alone. Join a community of women
-              who are choosing growth, connection, and real transformation&mdash;together.
+              Stop carrying the weight alone. Find clarity, real connection, and a path forward with people who understand&mdash;and guides who can help.
             </p>
           </FadeIn>
 
@@ -93,8 +92,8 @@ export default function HomePage() {
               This Is CollWi
             </span>
             <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-8">
-              <em className="text-brand-coral italic">Expert</em> coaches.{' '}
-              <em className="text-brand-teal italic">Supportive</em> community.
+              <em className="text-brand-coral italic">Guides</em> who get it.{' '}
+              <em className="text-brand-teal italic">Community</em> that lifts you up.
               <br />
               <span className="text-brand-navy/80">Your change starts here.</span>
             </h2>
@@ -141,7 +140,7 @@ export default function HomePage() {
               {[
                 'Finally letting go of the weight you\u2019ve been carrying alone',
                 'Reconnecting with who you are\u2014beyond your roles',
-                'Building friendships with women who genuinely lift you up',
+                'Building friendships with people who genuinely lift you up',
                 'Waking up with clarity about what comes next',
               ].map((item, i) => (
                 <FadeIn key={i} delay={0.1 + i * 0.06}>
@@ -249,7 +248,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-xl text-white/75 mb-10 max-w-xl mx-auto">
-              Join thousands of women who stopped waiting for
+              Join people who stopped waiting for
               &ldquo;the right time&rdquo; and chose themselves.
             </p>
           </FadeIn>
