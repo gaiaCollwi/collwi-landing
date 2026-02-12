@@ -8,7 +8,7 @@ const footerLinks = {
   ],
   'How It Works': [
     { label: 'For Members', href: '/collwiers' },
-    { label: 'For Coaches', href: '/coaches' },
+    { label: 'More Details', href: '/details' },
   ],
   Legal: [
     { label: 'Privacy Policy', href: 'https://collwi.com/privacy' },
@@ -53,6 +53,19 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Coach link */}
+        <div className="border-t border-gray-200 pt-8 pb-8 text-center">
+          <p className="text-sm text-gray-500">
+            Want to become a Coach on CollWi?{' '}
+            <a
+              href="https://www.collwi.coach"
+              className="text-brand-teal hover:text-brand-teal-dark font-semibold transition-colors duration-200"
+            >
+              Learn more &rarr;
+            </a>
+          </p>
         </div>
 
         {/* Divider */}

@@ -6,7 +6,7 @@ import Logo from './Logo'
 
 const navLinks = [
   { label: 'For Members', href: '/collwiers' },
-  { label: 'For Coaches', href: '/coaches' },
+  { label: 'More Details', href: '/details' },
   { label: 'Events', href: 'https://collwi.com/events' },
   { label: 'About Us', href: 'https://collwi.com/about' },
   { label: 'Blog', href: 'https://collwi.com/blog' },
