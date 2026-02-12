@@ -72,7 +72,7 @@ export default function CoachesPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.1] mb-8">
               Scale your{' '}
               <em className="text-brand-teal italic">impact.</em>
               <br />
@@ -105,7 +105,7 @@ export default function CoachesPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold leading-tight">
                 This is for you if you&apos;re a
                 <br />
                 certified coach who<em className="text-brand-teal italic">&hellip;</em>
@@ -138,7 +138,7 @@ export default function CoachesPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Benefits
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold">
                 Why coach on <em className="text-brand-teal italic">CollWi?</em>
               </h2>
             </div>
@@ -175,7 +175,7 @@ export default function CoachesPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Your Journey
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold">
                 How it <em className="text-brand-teal italic">works</em>
               </h2>
             </div>
@@ -190,7 +190,7 @@ export default function CoachesPage() {
                 <FadeIn key={i} delay={i * 0.1}>
                   <div className="flex items-start gap-6 md:gap-8">
                     <div className="flex-shrink-0 relative z-10 w-16 md:w-20 h-16 md:h-20 rounded-2xl bg-gradient-to-br from-brand-teal/10 to-brand-purple/10 flex items-center justify-center border border-brand-teal/20">
-                      <span className="text-2xl md:text-3xl font-serif font-bold text-brand-teal/60">
+                      <span className="text-2xl md:text-3xl font-sans font-bold text-brand-teal/60">
                         {i + 1}
                       </span>
                     </div>
@@ -214,7 +214,7 @@ export default function CoachesPage() {
               <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Requirements
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold">
                 Who we&apos;re <em className="text-brand-coral italic">looking for</em>
               </h2>
             </div>
@@ -241,7 +241,7 @@ export default function CoachesPage() {
       <section className="py-20 md:py-24 px-6 mesh-gradient-dark">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-white/90 mb-6">
+            <h3 className="text-2xl md:text-3xl font-sans font-bold text-white/90 mb-6">
               About CollWi
             </h3>
             <p className="text-lg text-white/55 leading-relaxed mb-4">
@@ -253,7 +253,7 @@ export default function CoachesPage() {
               certified coaches in small, supportive groups.
             </p>
             <div className="w-12 h-px bg-brand-teal mx-auto mt-8 mb-6" />
-            <p className="text-xl text-white/70 font-serif italic">
+            <p className="text-xl text-white/70 font-sans italic">
               Our mission: make growth social, accessible, and transformative.
             </p>
           </FadeIn>
@@ -270,7 +270,7 @@ export default function CoachesPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-tight">
               Ready to make a<br />bigger impact?
             </h2>
           </FadeIn>
