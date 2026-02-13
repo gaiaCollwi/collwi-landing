@@ -128,8 +128,8 @@ export default function CollWiersPage() {
 
           <StaggerContainer className="grid md:grid-cols-2 gap-4" staggerDelay={0.06}>
             {painPoints.map((item, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-start gap-4 p-6 rounded-2xl bg-surface-warm hover:bg-brand-teal-light/50 transition-colors duration-300 group">
+              <StaggerItem key={i} className="h-full">
+                <div className="flex items-start gap-4 p-6 rounded-2xl bg-surface-warm hover:bg-brand-teal-light/50 transition-colors duration-300 group h-full">
                   <div className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-teal flex items-center justify-center mt-0.5">
                     <Check size={14} className="text-white" strokeWidth={3} />
                   </div>
