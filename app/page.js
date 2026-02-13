@@ -4,7 +4,7 @@ import {
   ArrowRight, Check, Compass, Heart, Shield, Lightbulb,
   MessageCircle, Sprout, Target, Users, ChevronRight,
 } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/AnimatedSection'
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from './components/AnimatedSection'
 
 const painPoints = [
   "You're juggling work, family, and endless responsibilities\u2014but feel like you're running on empty",
