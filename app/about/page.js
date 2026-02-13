@@ -71,7 +71,7 @@ export default function AboutPage() {
                 because there&apos;s no space where you feel truly safe to share them.
               </p>
               <p className="text-xl md:text-2xl">
-                Traditional therapy is expensive and hard to access. Self-help feels isolating. 
+                People are looking for something different. Self-help feels isolating. 
                 Social media breeds comparison, not connection. And most &ldquo;communities&rdquo; are 
                 just echo chambers or sales funnels in disguise.
               </p>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-brand-navy">Accessible & Affordable</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
-                  Group coaching gives you professional support at a fraction of the cost of 1-on-1 therapy. 
+                  Group coaching gives you professional support in an accessible way. 
                   Real help shouldn&apos;t be a luxury.
                 </p>
               </div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Access Over Gatekeeping',
-                desc: "Support, growth, and transformation shouldn't be reserved for people who can afford $200/hour therapy. We're building something accessible and inclusive.",
+                desc: "Support, growth, and transformation should be accessible to everyone. We're building something inclusive that meets people where they are.",
               },
               {
                 title: 'Action Over Consumption',
