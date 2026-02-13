@@ -14,7 +14,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-32 pb-20">
           <FadeIn delay={0.1}>
-            <span className="inline-block px-5 py-2 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-8">
+            <span className="inline-block px-5 py-2 bg-brand-coral/10 text-brand-coral text-xs font-semibold tracking-[0.2em] uppercase rounded-full mb-8">
               About Us
             </span>
           </FadeIn>
@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Problem
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-6">
@@ -60,14 +60,14 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="prose prose-lg max-w-none text-brand-navy/70 leading-relaxed space-y-6">
+            <div className="space-y-8 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl">
                 Professional women juggling careers, families, and endless responsibilities. 
                 Coaches pouring their hearts into clients but burning out. Communities fragmenting 
                 as everyone retreated into isolation.
               </p>
               <p className="text-xl md:text-2xl">
-                The loneliness crisis isn&apos;t about being alone. It&apos;s about being <strong>unseen</strong>, 
+                The loneliness crisis isn&apos;t about being alone. It&apos;s about being <em className="text-brand-navy font-medium not-italic">unseen</em>, 
                 even when you&apos;re surrounded by people. It&apos;s about carrying your struggles in silence 
                 because there&apos;s no space where you feel truly safe to share them.
               </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-5">
                 Our Solution
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-brand-teal/10 rounded-2xl flex items-center justify-center mb-6">
                   <Users size={26} className="text-brand-teal" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-brand-navy">Guided Group Coaching</h3>
+                <h3 className="text-xl font-semibold mb-4 text-brand-navy">Guided Group Coaching</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
                   Professional coaches lead small, intimate groups through structured sessions. 
                   Not lectures—real conversations where everyone is seen, heard, and supported.
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-brand-coral/10 rounded-2xl flex items-center justify-center mb-6">
                   <Heart size={26} className="text-brand-coral" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-brand-navy">Real Connection</h3>
+                <h3 className="text-xl font-semibold mb-4 text-brand-navy">Real Connection</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
                   Meet people who actually get it. Who won&apos;t judge you for feeling overwhelmed 
                   or wanting more. Who lift you up instead of draining you.
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center mb-6">
                   <Compass size={26} className="text-brand-purple" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-brand-navy">Clarity & Direction</h3>
+                <h3 className="text-xl font-semibold mb-4 text-brand-navy">Clarity & Direction</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
                   Not just motivation or inspiration—actual tools, practices, and steps forward. 
                   You leave every session with something concrete.
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6">
                   <Sparkles size={26} className="text-brand-gold" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-brand-navy">Accessible & Affordable</h3>
+                <h3 className="text-xl font-semibold mb-4 text-brand-navy">Accessible & Affordable</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
                   Group coaching gives you professional support at a fraction of the cost of 1-on-1 therapy. 
                   Real help shouldn&apos;t be a luxury.
@@ -157,7 +157,7 @@ export default function AboutPage() {
 
           <FadeIn delay={0.3}>
             <p className="text-xl md:text-2xl text-center text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
-              CollWi is a platform, yes—but more than that, it&apos;s a <strong>movement</strong>. 
+              CollWi is a platform, yes—but more than that, it&apos;s a <span className="text-brand-navy font-medium">movement</span>. 
               A community of people who refuse to carry it all alone anymore.
             </p>
           </FadeIn>
@@ -169,7 +169,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-5">
                 Our Values
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
@@ -199,7 +199,7 @@ export default function AboutPage() {
             ].map((value, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <div className="border-l-4 border-brand-teal pl-6 py-2">
-                  <h3 className="text-2xl font-bold mb-3 text-brand-navy">{value.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-brand-navy">{value.title}</h3>
                   <p className="text-lg text-brand-navy/60 leading-relaxed">{value.desc}</p>
                 </div>
               </FadeIn>
@@ -213,7 +213,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Team
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-6">
@@ -223,22 +223,22 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="prose prose-lg max-w-none text-brand-navy/70 leading-relaxed space-y-6">
-              <p className="text-xl">
-                We&apos;re <strong>Barbara</strong> and <strong>Adriana</strong>—two people who saw the same problem 
+            <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
+              <p className="text-lg md:text-xl">
+                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>—two people who saw the same problem 
                 from different angles and decided to do something about it.
               </p>
-              <p className="text-xl">
+              <p className="text-lg md:text-xl">
                 Between us, we&apos;ve coached hundreds of people, built communities, navigated burnout, 
                 experienced loneliness even when surrounded by people, and learned firsthand that the 
                 traditional models aren&apos;t working.
               </p>
-              <p className="text-xl">
+              <p className="text-lg md:text-xl">
                 We&apos;re not trying to &ldquo;disrupt&rdquo; anything or build the next billion-dollar unicorn. 
-                We&apos;re building something <em className="font-semibold">real</em>—because we know what it&apos;s like 
+                We&apos;re building something <em className="text-brand-teal italic font-normal">real</em>—because we know what it&apos;s like 
                 to need it and not have it.
               </p>
-              <p className="text-xl">
+              <p className="text-lg md:text-xl">
                 CollWi is what we wish had existed when we were carrying everything alone.
               </p>
             </div>
@@ -257,7 +257,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-5">
                 Our Community
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-8">
@@ -319,7 +319,7 @@ export default function AboutPage() {
           <FadeIn delay={0.2}>
             <a
               href="https://collwi.com/register"
-              className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-bold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-semibold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               Start Your Journey Free
               <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
