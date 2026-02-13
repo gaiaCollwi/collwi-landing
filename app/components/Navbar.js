@@ -5,7 +5,6 @@ import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
 const navLinks = [
-  { label: 'For Members', href: '/collwiers' },
   { label: 'More Details', href: '/details' },
   { label: 'Events', href: 'https://collwi.com/events' },
   { label: 'About Us', href: 'https://collwi.com/about' },
