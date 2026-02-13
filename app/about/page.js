@@ -252,6 +252,46 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ─── What is a CollWier? ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-br from-brand-teal/5 via-white to-brand-coral/5">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+                Our Community
+              </span>
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-8">
+                What does being a{' '}
+                <em className="text-brand-teal italic">&ldquo;CollWier&rdquo;</em> mean?
+              </h2>
+            </div>
+          </FadeIn>
+
+          <ScaleIn delay={0.15}>
+            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-soft-xl border border-gray-100">
+              <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
+                We call our people <strong className="text-brand-teal">&apos;CollWiers,&apos;</strong> pronounced{' '}
+                <em className="font-semibold">&apos;CollWi(ee)er.&apos;</em>
+              </p>
+              <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
+                It&apos;s more than just a name — it&apos;s about being part of a community where 
+                everyone works through their challenges, pursues personal growth, and lifts each other up 
+                along the way.
+              </p>
+              <div className="mt-8 pt-8 border-t border-gray-100">
+                <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed">
+                  And here&apos;s a little secret...{' '}
+                  <span className="text-brand-coral font-semibold">
+                    when you help others grow, you&apos;ll find yourself growing too
+                  </span>{' '}
+                  — and it feels <em className="text-brand-teal italic">amazing.</em>
+                </p>
+              </div>
+            </div>
+          </ScaleIn>
+        </div>
+      </section>
+
       {/* ─── Join the Movement ─── */}
       <section className="relative py-28 md:py-36 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-teal via-brand-teal-dark to-brand-purple" />
