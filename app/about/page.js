@@ -37,7 +37,7 @@ export default function AboutPage() {
 
           <FadeIn delay={0.45}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
-              We saw brilliant, capable people carrying everything alone—and we knew there 
+              We saw brilliant, capable people carrying everything alone,and we knew there 
               had to be a better way.
             </p>
           </FadeIn>
@@ -62,7 +62,7 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-8 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl">
-                Professional women juggling careers, families, and endless responsibilities—running on empty, 
+                Professional women juggling careers, families, and endless responsibilities,running on empty, 
                 feeling isolated, and watching their communities fragment as everyone retreated into their own struggles.
               </p>
               <p className="text-xl md:text-2xl">
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold mb-4 text-brand-navy">Guided Group Coaching</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
                   Professional coaches lead small, intimate groups through structured sessions. 
-                  Not lectures—real conversations where everyone is seen, heard, and supported.
+                  Not lectures,real conversations where everyone is seen, heard, and supported.
                 </p>
               </div>
             </StaggerItem>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-brand-navy">Clarity & Direction</h3>
                 <p className="text-lg text-brand-navy/60 leading-relaxed">
-                  Not just motivation or inspiration—actual tools, practices, and steps forward. 
+                  Not just motivation or inspiration,actual tools, practices, and steps forward. 
                   You leave every session with something concrete.
                 </p>
               </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
           <FadeIn delay={0.3}>
             <p className="text-xl md:text-2xl text-center text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
-              CollWi is a platform, yes—but more than that, it&apos;s a <span className="text-brand-navy font-medium">movement</span>. 
+              CollWi is a platform, yes,but more than that, it&apos;s a <span className="text-brand-navy font-medium">movement</span>. 
               A community of people who refuse to carry it all alone anymore.
             </p>
           </FadeIn>
@@ -181,11 +181,11 @@ export default function AboutPage() {
             {[
               {
                 title: 'Real Over Perfect',
-                desc: "We don't do surface-level positivity or toxic \"good vibes only.\" Growth is messy. We create space for the whole truth—the hard parts and the hopeful parts.",
+                desc: "We don't do surface-level positivity or toxic \"good vibes only.\" Growth is messy. We create space for the whole truth,the hard parts and the hopeful parts.",
               },
               {
                 title: 'Community Over Competition',
-                desc: "Your wins don't take away from mine. We believe in collective wisdom, shared experiences, and lifting each other up—not climbing over each other.",
+                desc: "Your wins don't take away from mine. We believe in collective wisdom, shared experiences, and lifting each other up,not climbing over each other.",
               },
               {
                 title: 'Access Over Gatekeeping',
@@ -193,7 +193,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Action Over Consumption',
-                desc: "We're not here to sell you another course you'll never finish. You don't need more content—you need clarity, community, and consistent support.",
+                desc: "We're not here to sell you another course you'll never finish. You don't need more content,you need clarity, community, and consistent support.",
               },
             ].map((value, i) => (
               <FadeIn key={i} delay={i * 0.08}>
@@ -224,7 +224,7 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
               <p className="text-lg md:text-xl">
-                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>—two people who saw the same problem 
+                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>,two people who saw the same problem 
                 from different angles and decided to do something about it.
               </p>
               <p className="text-lg md:text-xl">
@@ -234,7 +234,7 @@ export default function AboutPage() {
               </p>
               <p className="text-lg md:text-xl">
                 We&apos;re not trying to &ldquo;disrupt&rdquo; anything or build the next billion-dollar unicorn. 
-                We&apos;re building something <em className="text-brand-teal italic font-normal">real</em>—because we know what it&apos;s like 
+                We&apos;re building something <em className="text-brand-teal italic font-normal">real</em>,because we know what it&apos;s like 
                 to need it and not have it.
               </p>
               <p className="text-lg md:text-xl">
@@ -273,7 +273,7 @@ export default function AboutPage() {
                 <em className="font-semibold">&apos;CollWi(ee)er.&apos;</em>
               </p>
               <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
-                It&apos;s more than just a name — it&apos;s about being part of a community where 
+                It&apos;s more than just a name , it&apos;s about being part of a community where 
                 everyone works through their challenges, pursues personal growth, and lifts each other up 
                 along the way.
               </p>
@@ -283,7 +283,7 @@ export default function AboutPage() {
                   <span className="text-brand-coral font-semibold">
                     when you help others grow, you&apos;ll find yourself growing too
                   </span>{' '}
-                  — and it feels <em className="text-brand-teal italic">amazing.</em>
+                  , and it feels <em className="text-brand-teal italic">amazing.</em>
                 </p>
               </div>
             </div>
