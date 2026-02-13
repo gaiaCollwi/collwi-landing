@@ -224,21 +224,8 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
               <p className="text-lg md:text-xl">
-                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>, two people who saw the same problem 
-                from different angles and decided to do something about it.
-              </p>
-              <p className="text-lg md:text-xl">
-                Between us, we&apos;ve coached hundreds of people, built communities, navigated burnout, 
-                experienced loneliness even when surrounded by people, and learned firsthand that the 
-                traditional models aren&apos;t working.
-              </p>
-              <p className="text-lg md:text-xl">
-                We&apos;re not trying to &ldquo;disrupt&rdquo; anything or build the next billion-dollar unicorn. 
-                We&apos;re building something <em className="text-brand-teal italic font-normal">real</em>, because we know what it&apos;s like 
-                to need it and not have it.
-              </p>
-              <p className="text-lg md:text-xl">
-                CollWi is what we wish had existed when we were carrying everything alone.
+                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>. We built CollWi because we&apos;ve experienced the same exhaustion, 
+                isolation, and loneliness we saw everywhere around us, and we knew there had to be a better way.
               </p>
             </div>
           </FadeIn>
