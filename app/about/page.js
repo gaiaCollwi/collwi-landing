@@ -62,9 +62,8 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-8 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl">
-                Professional women juggling careers, families, and endless responsibilities. 
-                Coaches pouring their hearts into clients but burning out. Communities fragmenting 
-                as everyone retreated into isolation.
+                Professional women juggling careers, families, and endless responsibilities—running on empty, 
+                feeling isolated, and watching their communities fragment as everyone retreated into their own struggles.
               </p>
               <p className="text-xl md:text-2xl">
                 The loneliness crisis isn&apos;t about being alone. It&apos;s about being <em className="text-brand-navy font-medium not-italic">unseen</em>, 
