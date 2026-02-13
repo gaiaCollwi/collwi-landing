@@ -64,11 +64,11 @@ export default function HomePage() {
           <StaggerContainer className="space-y-6 mb-12">
             {[
               "You're juggling work, family, and endless responsibilities—but feel like you're running on empty",
-              "You have "everything" on paper, but something still feels missing",
+              "You have \"everything\" on paper, but something still feels missing",
               "You've tried self-help books, podcasts, and advice—but nothing sticks",
               "You feel isolated, even when you're surrounded by people",
               "You're tired of surface-level friendships that leave you feeling heavier, not lighter",
-              "You know you're "meant for more," but don't know where to start"
+              "You know you're \"meant for more,\" but don't know where to start"
             ].map((item, i) => (
               <StaggerItem key={i} index={i}>
                 <div className="flex items-start gap-4 group">
@@ -102,7 +102,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.15}>
             <p className="text-lg md:text-xl text-brand-navy/60 leading-relaxed mb-8">
-              You don't need another checklist. You don't need to "try harder" or "think more positively."
+              You don't need another checklist. You don't need to \"try harder\" or \"think more positively.\"
             </p>
           </FadeIn>
 
@@ -151,7 +151,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.1}>
             <p className="text-lg md:text-xl text-brand-navy/60 text-center mb-16 max-w-2xl mx-auto">
-              Most support feels generic. Impersonal. Like it's designed for "everyone" but speaks to no one.
+              Most support feels generic. Impersonal. Like it's designed for \"everyone\" but speaks to no one.
             </p>
           </FadeIn>
 
@@ -173,7 +173,7 @@ export default function HomePage() {
               },
               {
                 title: "Structured, Not Overwhelming",
-                desc: "No endless content. No "do more" pressure. Just clear, intentional sessions."
+                desc: "No endless content. No \"do more\" pressure. Just clear, intentional sessions."
               },
               {
                 title: "Personalized Support",
@@ -314,7 +314,7 @@ export default function HomePage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 text-lg md:text-xl text-brand-navy/70 leading-relaxed mb-12">
               <p>You've spent years taking care of everyone else.</p>
-              <p>You've silenced your own needs because your life looks "good enough" from the outside.</p>
+              <p>You've silenced your own needs because your life looks \"good enough\" from the outside.</p>
               <p>You've told yourself you should be grateful—and used that gratitude to ignore what's missing.</p>
             </div>
           </FadeIn>
@@ -335,7 +335,7 @@ export default function HomePage() {
 
           <FadeIn delay={0.55}>
             <p className="text-xl md:text-2xl font-medium text-brand-navy/80">
-              CollWi is where you stop wondering "is this all there is?" and start building what comes next.
+              CollWi is where you stop wondering \"is this all there is?\" and start building what comes next.
             </p>
           </FadeIn>
         </div>
