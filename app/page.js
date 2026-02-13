@@ -1,12 +1,12 @@
 'use client'
 
-import { ArrowRight, ChevronRight } from 'lucide-react'
-import { FadeIn, ScaleIn } from './components/AnimatedSection'
+import { ArrowRight } from 'lucide-react'
+import { FadeIn, StaggerContainer, StaggerItem } from './components/AnimatedSection'
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* ─── Hero ─── */}
+      {/* ─── HERO SECTION ─── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden mesh-gradient">
         <div className="absolute top-20 left-[10%] w-72 h-72 bg-brand-teal/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-[10%] w-80 h-80 bg-brand-purple/10 rounded-full blur-3xl animate-float-delayed" />
@@ -15,251 +15,372 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
           <FadeIn delay={0.15}>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-light leading-[1.05] mb-8">
-              Your life looks good on paper.
+              You're Exhausted.
               <br />
-              But you know there&apos;s <em className="text-brand-coral italic">more.</em>
+              You're Overwhelmed.
             </h1>
           </FadeIn>
 
-          <FadeIn delay={0.35}>
-            <p className="text-xl md:text-2xl text-brand-navy/55 max-w-2xl mx-auto mb-12 leading-relaxed">
-              Stop carrying the weight alone. Find clarity, real connection, and a path forward with people who understand&mdash;and guides who can help.
+          <FadeIn delay={0.3}>
+            <p className="text-2xl md:text-3xl text-brand-navy/70 font-light mb-6">
+              And from the outside, your life looks fine.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.5}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://collwi.com/register"
-                className="group inline-flex items-center gap-2.5 px-9 py-4 bg-brand-teal text-white font-semibold text-lg rounded-full shadow-teal hover:bg-brand-teal-dark hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Start for Free
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="/details"
-                className="inline-flex items-center gap-2 px-8 py-4 text-brand-navy/60 font-medium text-lg rounded-full border border-gray-200 hover:border-brand-teal/40 hover:text-brand-teal transition-all duration-300"
-              >
-                How It Works
-              </a>
-            </div>
+          <FadeIn delay={0.45}>
+            <p className="text-xl md:text-2xl text-brand-navy/55 max-w-2xl mx-auto mb-12 leading-relaxed">
+              If you've been carrying everything—work, family, everyone's needs—and
+              wondering when it's finally your turn...
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.6}>
+            <p className="text-2xl md:text-3xl font-medium text-brand-teal mb-12">
+              You're in the right place.
+            </p>
           </FadeIn>
 
           <FadeIn delay={0.75}>
-            <p className="mt-5 text-sm text-brand-navy/35">
-              Free to join. No credit card required.
-            </p>
+            <a
+              href="https://collwi.com/register"
+              className="group inline-flex items-center gap-2.5 px-9 py-4 bg-brand-teal text-white font-semibold text-lg rounded-full shadow-teal hover:bg-brand-teal-dark hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+            >
+              Start Your Journey — Free
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </FadeIn>
         </div>
       </section>
 
-      {/* ─── Emotional Hook ─── */}
+      {/* ─── SECTION 1: RECOGNITION ─── */}
       <section className="py-24 md:py-32 px-6 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-10">
-              You&apos;ve been strong for <em className="text-brand-coral italic">everyone</em> else.
-              <br />
-              It&apos;s your turn now.
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-12 text-center">
+              This is for you if...
             </h2>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="space-y-6 text-lg md:text-xl text-brand-navy/50 leading-relaxed">
-              <p>
-                You&apos;re exhausted from holding it all together.
-                Work, family, expectations&mdash;and that quiet feeling
-                that something is <em>missing.</em>
-              </p>
-              <p>
-                You don&apos;t need more advice. You don&apos;t need
-                to &ldquo;try harder.&rdquo;
-              </p>
-              <p className="text-brand-navy/70 font-medium text-xl md:text-2xl">
-                You need people who <em className="text-brand-teal italic">get it</em>&mdash;and
-                a guide who can help you move forward.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ─── The Promise ─── */}
-      <section className="py-24 md:py-32 px-6 mesh-gradient-intense">
-        <div className="max-w-4xl mx-auto text-center">
-          <FadeIn>
-            <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-6">
-              This Is CollWi
-            </span>
-            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-8">
-              <em className="text-brand-coral italic">Guides</em> who get it.{' '}
-              <em className="text-brand-teal italic">Community</em> that lifts you up.
-              <br />
-              <span className="text-brand-navy/80">Your change starts here.</span>
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <p className="text-lg md:text-xl text-brand-navy/50 max-w-2xl mx-auto leading-relaxed mb-14">
-              Small group coaching led by certified professionals.
-              A safe space to be honest, feel seen, and finally grow
-              alongside people who lift you up.
-            </p>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <StaggerContainer className="space-y-6 mb-12">
             {[
-              { title: 'Guided by experts', desc: 'Certified coaches who know your name and your story' },
-              { title: 'Real connection', desc: 'Small groups where you belong\u2014not surface-level small talk' },
-              { title: 'Actual results', desc: 'Clarity, direction, and steps forward\u2014not just motivation' },
+              "You're juggling work, family, and endless responsibilities—but feel like you're running on empty",
+              "You have "everything" on paper, but something still feels missing",
+              "You've tried self-help books, podcasts, and advice—but nothing sticks",
+              "You feel isolated, even when you're surrounded by people",
+              "You're tired of surface-level friendships that leave you feeling heavier, not lighter",
+              "You know you're "meant for more," but don't know where to start"
             ].map((item, i) => (
-              <ScaleIn key={i} delay={0.1 + i * 0.1}>
-                <div className="bg-white rounded-2xl p-7 shadow-soft card-hover h-full text-center">
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-brand-navy/50 text-sm leading-relaxed">{item.desc}</p>
+              <StaggerItem key={i} index={i}>
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-brand-teal group-hover:scale-150 transition-transform" />
+                  <p className="text-lg md:text-xl text-brand-navy/70 leading-relaxed">
+                    {item}
+                  </p>
                 </div>
-              </ScaleIn>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
+
+          <FadeIn delay={0.3}>
+            <p className="text-xl md:text-2xl text-center font-medium text-brand-navy/80 mt-16">
+              You're not broken. You're just carrying too much, alone.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ─── Transformation ─── */}
-      <section className="py-24 md:py-32 px-6 bg-white">
+      {/* ─── SECTION 2: THE REAL PROBLEM ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-10">
-              Imagine feeling <em className="text-brand-teal italic">supported</em>
+              The Real Problem Isn't Your Life.
               <br />
-              for the first time in years.
+              <span className="text-brand-coral italic">It's That You're Living It Alone.</span>
             </h2>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="space-y-5 text-lg text-brand-navy/55 leading-relaxed max-w-xl mx-auto text-left">
-              {[
-                'Finally letting go of the weight you\u2019ve been carrying alone',
-                'Reconnecting with who you are\u2014beyond your roles',
-                'Building friendships with people who genuinely lift you up',
-                'Waking up with clarity about what comes next',
-              ].map((item, i) => (
-                <FadeIn key={i} delay={0.1 + i * 0.06}>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-2 h-2 rounded-full bg-brand-teal mt-2.5" />
-                    <p>{item}</p>
-                  </div>
-                </FadeIn>
-              ))}
+          <FadeIn delay={0.15}>
+            <p className="text-lg md:text-xl text-brand-navy/60 leading-relaxed mb-8">
+              You don't need another checklist. You don't need to "try harder" or "think more positively."
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.25}>
+            <div className="text-left max-w-2xl mx-auto mb-12 space-y-4">
+              <p className="text-lg text-brand-navy/70">What you need is:</p>
+              <ul className="space-y-3 text-lg text-brand-navy/70">
+                <li className="flex items-start gap-3">
+                  <span className="text-brand-teal font-bold">•</span>
+                  <span><strong className="text-brand-navy">Real connection</strong> — not surface-level small talk or mutual venting</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-brand-teal font-bold">•</span>
+                  <span><strong className="text-brand-navy">Guided support</strong> — someone to walk with you, not just tell you what to do</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-brand-teal font-bold">•</span>
+                  <span><strong className="text-brand-navy">A safe space</strong> — where you can be honest without judgment or guilt</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-brand-teal font-bold">•</span>
+                  <span><strong className="text-brand-navy">Clarity</strong> — not just motivation, but actual steps forward</span>
+                </li>
+              </ul>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <div className="mt-14">
-              <a
-                href="https://collwi.com/register"
-                className="group inline-flex items-center gap-2.5 px-9 py-4 bg-brand-teal text-white font-semibold text-lg rounded-full shadow-teal hover:bg-brand-teal-dark hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Begin Your Journey
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <p className="mt-4 text-sm text-brand-navy/35">
-                Free to start &middot; No credit card
-              </p>
-            </div>
+            <p className="text-2xl md:text-3xl font-semibold text-brand-teal">
+              CollWi gives you all of that.
+            </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* ─── Quote ─── */}
-      <section className="py-24 md:py-32 px-6 mesh-gradient-dark">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* ─── SECTION 3: WHY COLLWI IS DIFFERENT ─── */}
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <p className="text-3xl md:text-4xl font-sans italic text-white/90 mb-8 leading-relaxed">
-              &ldquo;I know this can&apos;t be all there is&hellip;
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-6 text-center">
+              Why CollWi Works When
               <br />
-              but I don&apos;t know where to start.&rdquo;
-            </p>
-            <div className="w-16 h-px bg-brand-teal mx-auto mb-8" />
-            <p className="text-xl text-white/60">
-              You don&apos;t have to know. That&apos;s what we&apos;re here for.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ─── Simple How It Works ─── */}
-      <section className="py-24 md:py-32 px-6 bg-surface-warm">
-        <div className="max-w-3xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-5xl font-sans font-light mb-4">
-                Three simple <em className="text-brand-purple italic">steps</em>
-              </h2>
-              <p className="text-brand-navy/45">Getting started takes less than 2 minutes.</p>
-            </div>
-          </FadeIn>
-
-          <div className="space-y-5">
-            {[
-              { num: '1', title: 'Join for free', desc: 'Create your account and find a group that fits you' },
-              { num: '2', title: 'Show up', desc: 'Attend weekly live sessions with your coach and group' },
-              { num: '3', title: 'Transform', desc: 'Gain clarity, build real connections, and move forward' },
-            ].map((step, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-soft card-hover">
-                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center text-xl font-bold text-brand-teal">
-                    {step.num}
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-bold mb-1">{step.title}</h3>
-                    <p className="text-brand-navy/50">{step.desc}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          <FadeIn delay={0.3}>
-            <div className="text-center mt-10">
-              <a
-                href="/details"
-                className="inline-flex items-center gap-1.5 text-brand-teal font-semibold hover:gap-2.5 transition-all duration-300"
-              >
-                Want more details? <ChevronRight size={18} />
-              </a>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ─── Final CTA ─── */}
-      <section className="relative py-28 md:py-36 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-teal via-brand-teal-dark to-brand-purple" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-20 w-48 h-48 bg-brand-gold rounded-full blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-light text-white mb-6 leading-tight">
-              You&apos;ve waited<br />long enough.
+              Everything Else Hasn't
             </h2>
           </FadeIn>
+
           <FadeIn delay={0.1}>
-            <p className="text-xl text-white/75 mb-10 max-w-xl mx-auto">
-              Join people who stopped waiting for
-              &ldquo;the right time&rdquo; and chose themselves.
+            <p className="text-lg md:text-xl text-brand-navy/60 text-center mb-16 max-w-2xl mx-auto">
+              Most support feels generic. Impersonal. Like it's designed for "everyone" but speaks to no one.
             </p>
           </FadeIn>
+
           <FadeIn delay={0.2}>
+            <p className="text-xl md:text-2xl font-semibold text-center mb-12">
+              CollWi is different because:
+            </p>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-8">
+            {[
+              {
+                title: "Guided Group Coaching",
+                desc: "You're not figuring this out alone. Professional coaches guide every session."
+              },
+              {
+                title: "Real Connection",
+                desc: "Meet people who get it. Who've been there. Who won't judge you for wanting more."
+              },
+              {
+                title: "Structured, Not Overwhelming",
+                desc: "No endless content. No "do more" pressure. Just clear, intentional sessions."
+              },
+              {
+                title: "Personalized Support",
+                desc: "Your coach knows your name, your story, your struggles. This isn't a YouTube video."
+              },
+              {
+                title: "Growth, Not Venting",
+                desc: "We go deeper than complaining. You'll leave sessions with clarity and direction."
+              }
+            ].map((item, i) => (
+              <StaggerItem key={i} index={i}>
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-full bg-brand-teal group-hover:scale-125 transition-transform" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-brand-navy mb-2">{item.title}</h3>
+                    <p className="text-lg text-brand-navy/70 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <FadeIn delay={0.5}>
+            <p className="text-xl md:text-2xl text-center font-medium text-brand-navy/80 mt-16">
+              This isn't self-help. It's guided transformation—together.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── SECTION 4: HOW IT WORKS ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-br from-brand-teal/5 via-white to-brand-purple/5">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-16 text-center">
+              How CollWi Works
+            </h2>
+          </FadeIn>
+
+          <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-12">
+            {[
+              {
+                number: "1",
+                title: "Join a Group",
+                desc: "Small, intimate coaching groups led by certified coaches"
+              },
+              {
+                number: "2",
+                title: "Show Up",
+                desc: "Weekly sessions designed to help you process, connect, and grow"
+              },
+              {
+                number: "3",
+                title: "Get Support",
+                desc: "Between sessions, stay connected with your group and coach"
+              },
+              {
+                number: "4",
+                title: "Move Forward",
+                desc: "With clarity, tools, and a community that actually gets it"
+              }
+            ].map((step, i) => (
+              <StaggerItem key={i} index={i}>
+                <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="text-5xl font-light text-brand-teal/20 mb-4">{step.number}</div>
+                  <h3 className="text-2xl font-semibold text-brand-navy mb-3">{step.title}</h3>
+                  <p className="text-lg text-brand-navy/70 leading-relaxed">{step.desc}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <FadeIn delay={0.4}>
+            <p className="text-xl text-center text-brand-navy/70 mb-8">
+              No judgment. No pressure. Just real support.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.5}>
+            <div className="text-center">
+              <a
+                href="/details"
+                className="inline-flex items-center gap-2 text-brand-teal hover:text-brand-teal-dark font-semibold text-lg transition-colors"
+              >
+                Learn More About How It Works
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── SECTION 5: WHAT YOU'LL GAIN ─── */}
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-16 text-center">
+              What Changes When You Join CollWi
+            </h2>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-6">
+            {[
+              "You'll stop carrying everything alone — and finally feel supported",
+              "You'll reconnect with yourself — beyond your roles as partner, parent, or employee",
+              "You'll gain clarity — on what's missing and what to do about it",
+              "You'll build real friendships — with people who lift you up, not drain you",
+              "You'll feel seen and heard — without having to explain or justify yourself",
+              "You'll believe your dreams are still possible — and take steps toward them"
+            ].map((item, i) => (
+              <StaggerItem key={i} index={i}>
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 text-3xl">🌱</div>
+                  <p className="text-lg md:text-xl text-brand-navy/70 leading-relaxed pt-1">
+                    {item}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ─── SECTION 6: PERMISSION TO WANT MORE ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gray-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-10">
+              You Deserve More Than{' '}
+              <span className="text-brand-coral italic">"Fine."</span>
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="space-y-6 text-lg md:text-xl text-brand-navy/70 leading-relaxed mb-12">
+              <p>You've spent years taking care of everyone else.</p>
+              <p>You've silenced your own needs because your life looks "good enough" from the outside.</p>
+              <p>You've told yourself you should be grateful—and used that gratitude to ignore what's missing.</p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <p className="text-2xl md:text-3xl font-semibold text-brand-navy mb-8">
+              But here's the truth:
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <div className="space-y-4 text-xl text-brand-navy/80 mb-12">
+              <p>You can be grateful <em className="text-brand-teal font-medium">and</em> want more.</p>
+              <p>You can have a stable life <em className="text-brand-teal font-medium">and</em> crave meaning, connection, and purpose.</p>
+              <p>You don't have to wait until everything falls apart to ask for support.</p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.55}>
+            <p className="text-xl md:text-2xl font-medium text-brand-navy/80">
+              CollWi is where you stop wondering "is this all there is?" and start building what comes next.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── FINAL CTA ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-br from-brand-teal/5 via-white to-brand-purple/5">
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-8">
+              Ready to Stop Carrying It All Alone?
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <p className="text-xl md:text-2xl text-brand-navy/70 mb-4">
+              Join CollWi today. It's free to start. No credit card. No pressure.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.25}>
+            <p className="text-lg text-brand-navy/60 mb-12">
+              Just real support, real connection, and a path forward.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.35}>
             <a
               href="https://collwi.com/register"
-              className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-bold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="group inline-flex items-center gap-2.5 px-10 py-5 bg-brand-teal text-white font-semibold text-xl rounded-full shadow-teal hover:bg-brand-teal-dark hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               Get Started Free
-              <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
             </a>
+          </FadeIn>
+
+          <FadeIn delay={0.5}>
+            <div className="mt-16 pt-16 border-t border-gray-200">
+              <p className="text-lg text-brand-navy/50 italic mb-4">
+                "I know this can't be all there is... but I don't know where to start."
+              </p>
+              <p className="text-xl font-medium text-brand-navy/70">
+                You don't have to know. That's what we're here for.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </section>
