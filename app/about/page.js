@@ -273,7 +273,7 @@ export default function AboutPage() {
                 <em className="font-semibold">&apos;CollWi(ee)er.&apos;</em>
               </p>
               <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
-                It&apos;s more than just a name , it&apos;s about being part of a community where 
+                It&apos;s more than just a name, it&apos;s about being part of a community where 
                 everyone works through their challenges, pursues personal growth, and lifts each other up 
                 along the way.
               </p>
