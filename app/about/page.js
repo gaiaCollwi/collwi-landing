@@ -80,7 +80,7 @@ export default function AboutPage() {
 
           <FadeIn delay={0.3}>
             <p className="text-2xl md:text-3xl font-sans font-light text-center mt-16 text-brand-navy">
-              We knew there was a <em className="text-brand-teal italic">better way.</em>
+              We couldn&apos;t find a better way... so we <em className="text-brand-teal italic">created it.</em>
             </p>
           </FadeIn>
         </div>
