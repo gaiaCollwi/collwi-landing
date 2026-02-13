@@ -7,7 +7,7 @@ import Logo from './Logo'
 const navLinks = [
   { label: 'More Details', href: '/details' },
   { label: 'Events', href: 'https://collwi.com/events' },
-  { label: 'About Us', href: 'https://collwi.com/about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Blog', href: 'https://collwi.com/blog' },
 ]
 
