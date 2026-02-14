@@ -100,6 +100,14 @@ export default function CollWiersPage() {
             </p>
           </FadeIn>
 
+          <FadeIn delay={0.32}>
+            <p className="text-base md:text-lg text-brand-navy/40 max-w-xl mx-auto mb-8 leading-relaxed">
+              Not networking. Not therapy. Not another productivity hack.  
+              <br />
+              Just real connection with women who get it.
+            </p>
+          </FadeIn>
+
           <FadeIn delay={0.35}>
             <p className="text-xl md:text-2xl text-brand-navy/55 max-w-2xl mx-auto mb-12 leading-relaxed">
               If you&apos;ve been carrying everything&mdash;work, family, everyone&apos;s
