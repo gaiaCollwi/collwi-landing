@@ -234,8 +234,8 @@ export default function AboutPage() {
               </p>
               <p className="text-lg md:text-xl">
                 That&apos;s why we built CollWi. A place where when you're struggling with something, you can show up and find 
-                not only community and connection with women who truly get it, but also guidance from coaches who can help 
-                you work through what you're facing.
+                not only community and connection with women who truly get it, but also guidance from coaches to help you 
+                overcome that hard thing faster.
               </p>
             </div>
           </FadeIn>
