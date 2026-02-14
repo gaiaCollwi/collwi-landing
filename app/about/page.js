@@ -78,7 +78,7 @@ export default function AboutPage() {
                 And most "communities" are just places to scroll, not places where you actually feel seen and supported.
               </p>
               <p className="text-xl md:text-2xl">
-                What you really need is other women who have been there. Who understand without you having to explain. 
+                What you really need is other women who understand without you having to explain. 
                 And guidance from someone who can actually help you work through it.
               </p>
             </div>
