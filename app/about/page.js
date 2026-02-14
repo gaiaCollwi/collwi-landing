@@ -21,24 +21,24 @@ export default function AboutPage() {
 
           <FadeIn delay={0.2}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-light leading-[1.1] mb-8">
-              We built CollWi because
+              We built CollWi because we know
               <br />
-              we&apos;ve{' '}
-              <em className="text-brand-teal italic">been there.</em>
+              what it feels like to struggle{' '}
+              <em className="text-brand-teal italic">alone.</em>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.35}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
-              The exhaustion. The isolation. The feeling that life looks &ldquo;fine&rdquo; from 
-              the outside, but something crucial is missing.
+              We went through hard things. The kind that leave you feeling alone even when you're 
+              surrounded by people—because they haven't been through it, so they don't get it.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.45}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
-              We saw brilliant, capable women carrying everything alone, and we decided to build 
-              the solution we wish had existed.
+              Then we realized: there are so many other women going through the same thing. 
+              Women who would understand. Who could relate. Who just needed to find each other.
             </p>
           </FadeIn>
         </div>
@@ -53,8 +53,8 @@ export default function AboutPage() {
                 The Problem
               </span>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-6">
-                Everywhere we looked, people were{' '}
-                <em className="text-brand-purple italic">struggling</em>
+                Feeling alone in a room{' '}
+                <em className="text-brand-purple italic">full of people</em>
               </h2>
             </div>
           </FadeIn>
@@ -62,25 +62,24 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-8 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl">
-                Professional women juggling careers, families, and endless responsibilities, running on empty, 
-                feeling isolated, and watching their communities fragment as everyone retreated into their own struggles.
+                You can be surrounded by people and still feel completely isolated. Because when they haven't 
+                been through what you're going through, they don't get it. They can't relate. And that makes 
+                you feel like you're carrying it all alone.
               </p>
               <p className="text-xl md:text-2xl">
-                The loneliness crisis isn&apos;t about being alone. It&apos;s about being <em className="text-brand-navy font-medium not-italic">unseen</em>, 
-                even when you&apos;re surrounded by people. It&apos;s about carrying your struggles in silence 
-                because there&apos;s no space where you feel truly safe to share them.
+                Self-help books feel hollow. Social media makes you feel worse. Therapy is expensive and hard to access. 
+                And most "communities" are just places to scroll, not places where you actually feel seen and supported.
               </p>
               <p className="text-xl md:text-2xl">
-                People are looking for something different. Self-help feels isolating. 
-                Social media breeds comparison, not connection. And most &ldquo;communities&rdquo; are 
-                just echo chambers or sales funnels in disguise.
+                What you really need is other women who have been there. Who understand without you having to explain. 
+                And guidance from someone who can actually help you work through it.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <p className="text-2xl md:text-3xl font-sans font-light text-center mt-16 text-brand-navy">
-              We couldn&apos;t find a better way... so we <em className="text-brand-teal italic">created it.</em>
+              We couldn&apos;t find that place... so we <em className="text-brand-teal italic">built it.</em>
             </p>
           </FadeIn>
         </div>
@@ -224,9 +223,19 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
               <p className="text-lg md:text-xl">
-                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>—two women who saw the 
-                exhaustion and isolation everywhere around us and decided to do something about it. We built CollWi to 
-                create the community and support system we believe every woman deserves.
+                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>. 
+                We both went through things that left us feeling completely alone—even though we were surrounded by people. 
+                They hadn't experienced what we were going through, so they didn't get it. And that made us feel isolated 
+                in our struggle.
+              </p>
+              <p className="text-lg md:text-xl">
+                Then we realized: there are so many other women out there facing similar struggles. Women who would understand. 
+                Who could relate. Who just needed a place to find each other.
+              </p>
+              <p className="text-lg md:text-xl">
+                That&apos;s why we built CollWi. A place where when you're struggling with something, you can show up and find 
+                not only community and connection with women who truly get it, but also guidance from coaches who can help 
+                you work through what you're facing.
               </p>
             </div>
           </FadeIn>
