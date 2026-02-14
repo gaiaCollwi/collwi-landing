@@ -10,7 +10,7 @@ const painPoints = [
   "You're juggling work, family, and endless responsibilities\u2014but feel like you're running on empty",
   "You have 'everything' on paper, but something still feels missing",
   "You've tried self-help books, podcasts, and advice\u2014but nothing sticks",
-  "You feel isolated, even when you're surrounded by people",
+  "You feel isolated, even when you're surrounded by others",
   "You're tired of surface-level friendships that leave you feeling heavier, not lighter",
   "You know you're 'meant for more,' but don't know where to start",
 ]
@@ -59,7 +59,7 @@ const outcomes = [
   "You'll stop carrying everything alone \u2014 and finally feel supported",
   "You'll reconnect with yourself \u2014 beyond your roles as partner, parent, or employee",
   "You'll gain clarity \u2014 on what's missing and what to do about it",
-  "You'll build real friendships \u2014 with women who lift you up, not drain you",
+  "You'll build real friendships \u2014 with other women who lift you up, not drain you",
   "You'll feel seen and heard \u2014 without having to explain or justify yourself",
   "You'll believe your dreams are still possible \u2014 and take steps toward them",
 ]
@@ -92,6 +92,12 @@ export default function CollWiersPage() {
                 <em className="text-brand-coral italic">fine.</em>
               </span>
             </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <p className="text-lg md:text-xl text-brand-teal/70 font-medium mb-6">
+              A platform built by women, for women
+            </p>
           </FadeIn>
 
           <FadeIn delay={0.35}>
