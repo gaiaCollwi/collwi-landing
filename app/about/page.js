@@ -31,13 +31,20 @@ export default function AboutPage() {
           <FadeIn delay={0.35}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
               We went through hard things. The kind that leave you feeling alone even when you're 
-              surrounded by people—because they haven't been through it, so they don't get it.
+              surrounded by people—because they either haven't been through it, or they faced it years ago 
+              and now just tell you "you can do it" or "when one door closes, another opens."
             </p>
           </FadeIn>
 
           <FadeIn delay={0.45}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
-              Then we realized: there are so many other women going through the same thing. 
+              Words that feel hollow when you're in the thick of it. Not helpful. Not what you need.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.55}>
+            <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
+              Then we realized: there are so many other women going through the same thing <em className="text-brand-navy font-medium not-italic">right now</em>. 
               Women who would understand. Who could relate. Who just needed to find each other.
             </p>
           </FadeIn>
@@ -224,13 +231,17 @@ export default function AboutPage() {
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
               <p className="text-lg md:text-xl">
                 We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>. 
-                We both went through things that left us feeling completely alone—even though we were surrounded by people. 
-                They hadn't experienced what we were going through, so they didn't get it. And that made us feel isolated 
-                in our struggle.
+                We both went through things that left us feeling completely alone—even though we were surrounded by people.
               </p>
               <p className="text-lg md:text-xl">
-                Then we realized: there are so many other women out there facing similar struggles. Women who would understand. 
-                Who could relate. Who just needed a place to find each other.
+                Some hadn't experienced what we were going through, so they didn't get it. Others had faced it in the past, 
+                but weren't in it anymore—so we got well-meaning but unhelpful words like "you can do it" or "this will be 
+                the best thing that ever happened to you" or "when one door closes, another opens." Things that felt impossible 
+                to believe when we were in the thick of it.
+              </p>
+              <p className="text-lg md:text-xl">
+                Then we realized: there are so many other women out there facing similar struggles <em className="text-brand-navy font-medium not-italic">right now</em>. 
+                Women who would understand. Who could relate. Who just needed a place to find each other.
               </p>
               <p className="text-lg md:text-xl">
                 That&apos;s why we built CollWi. A place where when you're struggling with something, you can show up and find 
