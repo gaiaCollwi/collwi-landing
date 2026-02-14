@@ -27,6 +27,9 @@ export default function Footer() {
             <div className="mb-5">
               <Logo size="default" />
             </div>
+            <p className="text-gray-600 text-sm leading-relaxed max-w-xs mb-3">
+              A platform built by women, for women.
+            </p>
             <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
               Turning personal growth from a lonely journey into a shared, guided
               experience through live group coaching and community.
