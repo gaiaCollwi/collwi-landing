@@ -10,14 +10,21 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'CollWi - Expert Coaches. Supportive Community.',
+  title: 'CollWi | Community for Women\'s Personal Growth & Connection',
   description:
-    'Group coaching that turns personal growth from a lonely journey into a shared, guided experience. Expert coaches, real connection, real transformation.',
+    'A platform built by women, for women. Group coaching and community for women seeking real connection, support, and personal growth. Join free.',
+  keywords: 'women community, women support group, group coaching for women, community for women, women helping women, online women\'s group, personal growth women',
   openGraph: {
-    title: 'CollWi - Collective Wisdom',
+    title: 'CollWi | Community for Women\'s Personal Growth & Connection',
     description:
-      'Expert Coaches. Supportive Community. Your change starts here.',
+      'A platform built by women, for women. Group coaching and real connection for women seeking support and growth.',
     type: 'website',
+    siteName: 'CollWi',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CollWi | Community for Women\'s Personal Growth',
+    description: 'Group coaching and community built by women, for women.',
   },
 }
 
