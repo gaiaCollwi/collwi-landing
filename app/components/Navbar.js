@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'More Details', href: '/details' },
   { label: 'Events', href: 'https://collwi.com/events' },
   { label: 'About Us', href: '/about' },
-  { label: 'Blog', href: 'https://collwi.com/blog' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 export default function Navbar() {
