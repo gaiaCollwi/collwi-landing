@@ -37,8 +37,8 @@ export default function AboutPage() {
 
           <FadeIn delay={0.45}>
             <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
-              We saw brilliant, capable people carrying everything alone, and we knew there 
-              had to be a better way.
+              We saw brilliant, capable women carrying everything alone, and we decided to build 
+              the solution we wish had existed.
             </p>
           </FadeIn>
         </div>
@@ -224,8 +224,9 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
               <p className="text-lg md:text-xl">
-                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>. We built CollWi because we&apos;ve experienced the same exhaustion, 
-                isolation, and loneliness we saw everywhere around us, and we knew there had to be a better way.
+                We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and <span className="text-brand-navy font-medium">Adriana</span>—two women who saw the 
+                exhaustion and isolation everywhere around us and decided to do something about it. We built CollWi to 
+                create the community and support system we believe every woman deserves.
               </p>
             </div>
           </FadeIn>
