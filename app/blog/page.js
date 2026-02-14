@@ -14,6 +14,42 @@ const blogPosts = [
     readTime: '8 min read',
     category: 'Connection',
   },
+  {
+    slug: 'exhausted-all-the-time-women',
+    title: 'Exhausted All the Time? Here\'s Why (And How Women Are Finding Relief)',
+    excerpt: 'Constantly exhausted even after rest? Learn why burnout affects women differently and discover practical ways to reclaim your energy.',
+    date: '2026-02-14',
+    author: 'CollWi Team',
+    readTime: '7 min read',
+    category: 'Wellness',
+  },
+  {
+    slug: 'best-online-support-groups-for-women',
+    title: 'The Best Online Support Groups for Women in 2026',
+    excerpt: 'Looking for real support online? We reviewed the top women\'s support groups and communities. Here\'s what actually works.',
+    date: '2026-02-14',
+    author: 'CollWi Team',
+    readTime: '9 min read',
+    category: 'Community',
+  },
+  {
+    slug: 'group-coaching-for-women-what-it-is',
+    title: 'Group Coaching for Women: What It Is and How It Works',
+    excerpt: 'Curious about group coaching? Learn what it is, how it differs from therapy and support groups, and whether it\'s right for you.',
+    date: '2026-02-14',
+    author: 'CollWi Team',
+    readTime: '7 min read',
+    category: 'Personal Growth',
+  },
+  {
+    slug: 'finding-real-connection-as-adult',
+    title: 'Finding Real Connection: How to Build Community When You Feel Alone',
+    excerpt: 'Making friends and finding community as an adult is hard. Here\'s a practical guide to building real connections when you\'re starting from scratch.',
+    date: '2026-02-14',
+    author: 'CollWi Team',
+    readTime: '8 min read',
+    category: 'Connection',
+  },
 ]
 
 export default function BlogPage() {
