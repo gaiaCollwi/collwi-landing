@@ -13,7 +13,7 @@ const footerLinks = {
   Legal: [
     { label: 'Privacy Policy', href: 'https://collwi.com/privacy' },
     { label: 'Terms of Service', href: 'https://collwi.com/terms' },
-    { label: 'FAQs', href: 'https://collwi.com/faqs' },
+    { label: 'FAQ', href: '/faq' },
   ],
 }
 

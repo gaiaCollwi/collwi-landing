@@ -10,27 +10,70 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'CollWi | Community for Women\'s Personal Growth & Connection',
+  title: 'CollWi | Affordable Coaching for Women ($12.99/Month)',
   description:
-    'A platform built by women, for women. Group coaching and community for women seeking real connection, support, and personal growth. Join free.',
-  keywords: 'women community, women support group, group coaching for women, community for women, women helping women, online women\'s group, personal growth women',
+    'Group coaching built by women, for women. $12.99/month. Certified coaches, live sessions, real support. 10x more affordable than Chief or BetterUp. Join free.',
+  keywords: 'affordable coaching for women, group coaching women, women\'s coaching platform, life coaching for women, career coaching women, coaching for working moms, women support group, affordable life coach',
   openGraph: {
-    title: 'CollWi | Community for Women\'s Personal Growth & Connection',
+    title: 'CollWi | Affordable Coaching for Women ($12.99/Month)',
     description:
-      'A platform built by women, for women. Group coaching and real connection for women seeking support and growth.',
+      'Group coaching built by women, for women. $12.99/month. Certified coaches, live sessions, real support.',
     type: 'website',
     siteName: 'CollWi',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CollWi | Community for Women\'s Personal Growth',
-    description: 'Group coaching and community built by women, for women.',
+    title: 'CollWi | Affordable Coaching for Women',
+    description: 'Group coaching for women. $12.99/month. Built by women, for women.',
   },
 }
 
 export default function RootLayout({ children }) {
+  // Organization Schema for AEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CollWi",
+    "description": "Affordable group coaching platform for women. Built by women, for women.",
+    "url": "https://collwi.com",
+    "logo": "https://collwi.com/collwi-logo.png",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Barbara"
+      },
+      {
+        "@type": "Person",
+        "name": "Adriana"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/collwi-collective-wisdom/",
+      "https://www.instagram.com/collwi_collective_wisdom/",
+      "https://www.facebook.com/profile.php?id=61565171915248"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "Group Coaching Membership",
+      "price": "12.99",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "12.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M"
+      }
+    }
+  }
+
   return (
     <html lang="en" className={outfit.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="font-sans overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
