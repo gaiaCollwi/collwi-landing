@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Check, Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
-export default function MemberRegister() {
+export default function MemberLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ export default function MemberRegister() {
     e.preventDefault();
     setIsLoading(true);
     // API integration here
-    console.log('Member registration:', { email, password });
+    console.log('Member login:', { email, password });
     setTimeout(() => setIsLoading(false), 1500);
   };
 
@@ -61,11 +61,11 @@ export default function MemberRegister() {
                   backgroundImage: 'linear-gradient(to right, #97C9CA, #AE6EDE, #FA9F56)'
                 }}
               >
-                Welcome to CollWi
+                Welcome Back
               </span>
             </h1>
             <p className="font-nunito text-gray-600 text-base">
-              Start your journey to personal growth
+              Log in to continue your journey
             </p>
           </div>
 
@@ -88,9 +88,18 @@ export default function MemberRegister() {
             </div>
 
             <div>
-              <label htmlFor="password" className="font-nunito block text-sm font-semibold text-gray-700 mb-2">
-                Password
-              </label>
+              <div className="flex items-center justify-between mb-2">
+                <label htmlFor="password" className="font-nunito block text-sm font-semibold text-gray-700">
+                  Password
+                </label>
+                <Link 
+                  href="/forgot-password" 
+                  className="font-nunito text-sm font-semibold hover:underline"
+                  style={{ color: '#7C3AED' }}
+                >
+                  Forgot?
+                </Link>
+              </div>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -116,7 +125,7 @@ export default function MemberRegister() {
             <button
               type="submit"
               disabled={isLoading}
-              className="font-nunito w-full text-white font-bold py-4 px-8 rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base"
+              className="font-nunito w-full text-white font-bold py-4 px-8 rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base mt-6"
               style={{
                 background: 'linear-gradient(135deg, #6DCFD0 0%, #7C3AED 100%)',
                 boxShadow: '0 4px 16px rgba(124, 58, 237, 0.25)'
@@ -133,10 +142,10 @@ export default function MemberRegister() {
               {isLoading ? (
                 <div className="flex items-center justify-center gap-3">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Creating account...</span>
+                  <span>Logging in...</span>
                 </div>
               ) : (
-                'Create Account'
+                'Log In'
               )}
             </button>
 
@@ -164,61 +173,21 @@ export default function MemberRegister() {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
-              <span>Sign up with Google</span>
+              <span>Log in with Google</span>
             </button>
 
-            {/* Terms */}
-            <p className="font-nunito text-xs text-gray-500 text-center leading-relaxed mt-6">
-              By creating an account you agree to CollWi's{' '}
-              <Link
-                href="https://collwi.com/terms"
-                target="_blank"
-                className="font-semibold hover:underline"
-                style={{ color: '#7C3AED' }}
-              >
-                Terms of Service
-              </Link>{' '}
-              and{' '}
-              <Link
-                href="https://collwi.com/privacy"
-                target="_blank"
-                className="font-semibold hover:underline"
-                style={{ color: '#7C3AED' }}
-              >
-                Privacy Policy
-              </Link>
-            </p>
-
-            {/* Login Link */}
-            <div className="font-nunito text-center pt-2">
-              Already have an account?{' '}
+            {/* Sign up Link */}
+            <div className="font-nunito text-center pt-4">
+              Don't have an account?{' '}
               <Link 
-                href="https://collwi.com/login" 
+                href="/register" 
                 className="font-bold hover:underline"
                 style={{ color: '#7C3AED' }}
               >
-                Log in
+                Sign up
               </Link>
             </div>
           </form>
-
-          {/* Trust Badges */}
-          <div className="mt-8 pt-6 border-t border-gray-100">
-            <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-600">
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Free to join</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Cancel anytime</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Secure & private</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
