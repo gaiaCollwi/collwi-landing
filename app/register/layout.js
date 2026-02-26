@@ -1,18 +1,8 @@
-import { Outfit } from 'next/font/google'
-import '../globals.css'
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
-  display: 'swap',
-})
+export const metadata = {
+  title: 'Join CollWi | Start Your Journey',
+  description: 'Create your CollWi account. Join as a member for guided group coaching, or as a coach to share your expertise.',
+}
 
 export default function RegisterLayout({ children }) {
-  return (
-    <html lang="en" className={outfit.variable}>
-      <body className="font-sans overflow-x-hidden bg-white">
-        {children}
-      </body>
-    </html>
-  )
+  return children
 }

@@ -1,226 +1,165 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Check, Eye, EyeOff } from 'lucide-react';
+import Link from 'next/link'
+import { ArrowRight, Heart, Sparkles, Shield, Users, Star } from 'lucide-react'
+import { FadeIn, ScaleIn } from '../components/AnimatedSection'
 
-export default function MemberRegister() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+const memberBenefits = [
+  'Guided group coaching sessions',
+  'Certified women coaches',
+  'A community that gets it',
+]
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    // API integration here
-    console.log('Member registration:', { email, password });
-    setTimeout(() => setIsLoading(false), 1500);
-  };
+const coachBenefits = [
+  'Keep 82% of what you earn',
+  'Set your own schedule',
+  'Built-in client pipeline',
+]
 
+export default function RegisterPage() {
   return (
-    <div 
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12"
-      style={{
-        background: 'linear-gradient(180deg, #EDE7F8 0%, #FFFFFF 50%, #FFE4D2 100%)'
-      }}
-    >
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Nunito:wght@400;600;700&display=swap');
-        
-        .font-crete { font-family: 'Crete Round', serif; }
-        .font-nunito { font-family: 'Nunito', sans-serif; }
-      `}</style>
+    <div className="min-h-screen pt-24">
+      {/* Background */}
+      <div className="fixed inset-0 mesh-gradient-intense -z-10" />
+      <div className="fixed top-40 right-[8%] w-72 h-72 bg-brand-purple/8 rounded-full blur-3xl animate-float -z-10" />
+      <div className="fixed bottom-32 left-[5%] w-80 h-80 bg-brand-coral/6 rounded-full blur-3xl animate-float-delayed -z-10" />
+      <div className="fixed top-60 left-[15%] w-48 h-48 bg-brand-teal/6 rounded-full blur-3xl animate-float-slow -z-10" />
 
-      <div className="w-full max-w-md">
-        {/* Card Container */}
-        <div 
-          className="bg-white rounded-3xl p-6 sm:p-10 transition-all duration-300"
-          style={{
-            boxShadow: '0 8px 32px rgba(124, 58, 237, 0.08)',
-            border: '1px solid rgba(124, 58, 237, 0.08)'
-          }}
-        >
-          
-          {/* Logo/Icon */}
-          <div className="text-center mb-8">
-            <Link href="/" className="inline-block mb-6">
-              <div 
-                className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, #7C3AED 0%, #6DCFD0 50%, #F87823 100%)'
-                }}
-              >
-                <span className="text-white text-2xl font-bold">C</span>
+      <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
+        {/* Hero */}
+        <div className="text-center mb-16 md:mb-20">
+          <FadeIn delay={0.1}>
+            <span className="inline-block px-5 py-2 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-8">
+              Start Your Journey
+            </span>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light leading-[1.1] mb-6">
+              You&apos;re ready for
+              <br />
+              something <em className="text-brand-teal italic">real.</em>
+            </h1>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <p className="text-lg md:text-xl text-brand-navy/50 max-w-xl mx-auto leading-relaxed">
+              Whether you&apos;re seeking support or sharing your expertise,
+              CollWi is where transformation happens.
+            </p>
+          </FadeIn>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto mb-16">
+          {/* Member Card */}
+          <ScaleIn delay={0.35}>
+            <Link href="/register/member" className="group block h-full">
+              <div className="relative h-full bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-gray-100/80 transition-all duration-500 hover:-translate-y-2 hover:shadow-teal overflow-hidden">
+                {/* Accent gradient */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-teal to-brand-teal-dark rounded-t-3xl" />
+
+                <div className="relative">
+                  <div className="w-14 h-14 bg-brand-teal/10 rounded-2xl flex items-center justify-center mb-6">
+                    <Heart size={26} className="text-brand-teal" />
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-light mb-3">
+                    Join as a <strong className="font-bold">Member</strong>
+                  </h2>
+
+                  <p className="text-brand-navy/50 leading-relaxed mb-8">
+                    Find your people. Get real support. Start growing with women who understand your journey.
+                  </p>
+
+                  <ul className="space-y-3 mb-10">
+                    {memberBenefits.map((benefit, i) => (
+                      <li key={i} className="flex items-center gap-3 text-brand-navy/65">
+                        <div className="w-5 h-5 rounded-full bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
+                          <Sparkles size={12} className="text-brand-teal" />
+                        </div>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center gap-2 text-brand-teal font-semibold group-hover:gap-3 transition-all duration-300">
+                    <span>Get started free</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
             </Link>
-            <h1 className="font-crete text-3xl sm:text-4xl font-bold mb-3">
-              <span 
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: 'linear-gradient(to right, #97C9CA, #AE6EDE, #FA9F56)'
-                }}
-              >
-                Welcome to CollWi
-              </span>
-            </h1>
-            <p className="font-nunito text-gray-600 text-base">
-              Start your journey to personal growth
-            </p>
-          </div>
+          </ScaleIn>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label htmlFor="email" className="font-nunito block text-sm font-semibold text-gray-700 mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="font-nunito w-full px-4 py-3.5 border-2 border-gray-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all duration-300 text-gray-900 bg-gray-50 hover:bg-white"
-                placeholder="you@example.com"
-                disabled={isLoading}
-              />
-            </div>
+          {/* Coach Card */}
+          <ScaleIn delay={0.45}>
+            <Link href="/register/coach" className="group block h-full">
+              <div className="relative h-full bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-gray-100/80 transition-all duration-500 hover:-translate-y-2 hover:shadow-purple overflow-hidden">
+                {/* Accent gradient */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-purple to-brand-purple-dark rounded-t-3xl" />
 
-            <div>
-              <label htmlFor="password" className="font-nunito block text-sm font-semibold text-gray-700 mb-2">
-                Password
-              </label>
-              <div className="relative">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  id="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="font-nunito w-full px-4 py-3.5 pr-12 border-2 border-gray-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all duration-300 text-gray-900 bg-gray-50 hover:bg-white"
-                  placeholder="••••••••"
-                  disabled={isLoading}
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-purple-600 transition-colors"
-                  aria-label={showPassword ? 'Hide password' : 'Show password'}
-                >
-                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
-              </div>
-            </div>
+                <div className="relative">
+                  <div className="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center mb-6">
+                    <Star size={26} className="text-brand-purple" />
+                  </div>
 
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="font-nunito w-full text-white font-bold py-4 px-8 rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base"
-              style={{
-                background: 'linear-gradient(135deg, #6DCFD0 0%, #7C3AED 100%)',
-                boxShadow: '0 4px 16px rgba(124, 58, 237, 0.25)'
-              }}
-              onMouseEnter={(e) => {
-                if (!isLoading) {
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(124, 58, 237, 0.35)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 16px rgba(124, 58, 237, 0.25)';
-              }}
-            >
-              {isLoading ? (
-                <div className="flex items-center justify-center gap-3">
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Creating account...</span>
+                  <h2 className="text-2xl md:text-3xl font-light mb-3">
+                    Join as a <strong className="font-bold">Coach</strong>
+                  </h2>
+
+                  <p className="text-brand-navy/50 leading-relaxed mb-8">
+                    Share your expertise. Build your practice. Make a real difference in women&apos;s lives.
+                  </p>
+
+                  <ul className="space-y-3 mb-10">
+                    {coachBenefits.map((benefit, i) => (
+                      <li key={i} className="flex items-center gap-3 text-brand-navy/65">
+                        <div className="w-5 h-5 rounded-full bg-brand-purple/10 flex items-center justify-center flex-shrink-0">
+                          <Sparkles size={12} className="text-brand-purple" />
+                        </div>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center gap-2 text-brand-purple font-semibold group-hover:gap-3 transition-all duration-300">
+                    <span>Apply to coach</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              ) : (
-                'Create Account'
-              )}
-            </button>
+              </div>
+            </Link>
+          </ScaleIn>
+        </div>
 
-            {/* Divider */}
-            <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="font-nunito px-4 bg-white text-gray-500">
-                  Or continue with
-                </span>
-              </div>
+        {/* Trust */}
+        <FadeIn delay={0.5}>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-sm text-brand-navy/40 mb-10">
+            <div className="flex items-center gap-2">
+              <Shield size={16} className="text-brand-teal" />
+              <span>Free to join</span>
             </div>
-
-            {/* Google Button */}
-            <button
-              type="button"
-              disabled={isLoading}
-              className="font-nunito w-full bg-white border-2 border-gray-200 text-gray-700 font-semibold py-4 px-8 rounded-full hover:border-teal-400 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-              </svg>
-              <span>Sign up with Google</span>
-            </button>
-
-            {/* Terms */}
-            <p className="font-nunito text-xs text-gray-500 text-center leading-relaxed mt-6">
-              By creating an account you agree to CollWi's{' '}
-              <Link
-                href="https://collwi.com/terms"
-                target="_blank"
-                className="font-semibold hover:underline"
-                style={{ color: '#7C3AED' }}
-              >
-                Terms of Service
-              </Link>{' '}
-              and{' '}
-              <Link
-                href="https://collwi.com/privacy"
-                target="_blank"
-                className="font-semibold hover:underline"
-                style={{ color: '#7C3AED' }}
-              >
-                Privacy Policy
-              </Link>
-            </p>
-
-            {/* Login Link */}
-            <div className="font-nunito text-center pt-2">
-              Already have an account?{' '}
-              <Link 
-                href="https://collwi.com/login" 
-                className="font-bold hover:underline"
-                style={{ color: '#7C3AED' }}
-              >
-                Log in
-              </Link>
+            <div className="flex items-center gap-2">
+              <Shield size={16} className="text-brand-teal" />
+              <span>Cancel anytime</span>
             </div>
-          </form>
-
-          {/* Trust Badges */}
-          <div className="mt-8 pt-6 border-t border-gray-100">
-            <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-600">
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Free to join</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Cancel anytime</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} style={{ color: '#6DCFD0' }} />
-                <span className="font-nunito">Secure & private</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <Shield size={16} className="text-brand-teal" />
+              <span>Secure &amp; private</span>
             </div>
           </div>
-        </div>
+        </FadeIn>
+
+        <FadeIn delay={0.55}>
+          <p className="text-center text-brand-navy/40">
+            Already have an account?{' '}
+            <Link href="/login" className="text-brand-teal font-semibold hover:text-brand-teal-dark transition-colors">
+              Log in
+            </Link>
+          </p>
+        </FadeIn>
       </div>
     </div>
-  );
+  )
 }
