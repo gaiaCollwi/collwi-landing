@@ -69,7 +69,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <head>
-        <link rel="icon" href="/collwi-logo.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
