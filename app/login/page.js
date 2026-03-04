@@ -2,20 +2,43 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ArrowRight, Eye, EyeOff, Shield } from 'lucide-react'
 import { FadeIn, ScaleIn } from '../components/AnimatedSection'
+import { auth, APIError } from '@/lib/api'
 
 export default function LoginPage() {
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
-    console.log('Login:', { email, password })
-    setTimeout(() => setIsLoading(false), 1500)
+    setError('')
+
+    try {
+      await auth.login(email, password)
+      // Redirect to dashboard or home
+      router.push('/dashboard')
+    } catch (err) {
+      if (err instanceof APIError) {
+        setError(err.message || 'Invalid email or password')
+      } else {
+        setError('Something went wrong. Please try again.')
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleGoogleLogin = () => {
+    // Redirect to Google OAuth on collwi.com backend
+    const redirectUri = `${window.location.origin}/auth/callback`
+    window.location.href = `https://collwi.com/api/auth/google?redirect_uri=${encodeURIComponent(redirectUri)}`
   }
 
   return (
@@ -40,6 +63,7 @@ export default function LoginPage() {
             {/* Google OAuth */}
             <button
               type="button"
+              onClick={handleGoogleLogin}
               disabled={isLoading}
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white border border-gray-200 rounded-2xl font-semibold text-brand-navy/70 hover:border-brand-teal/40 hover:shadow-soft transition-all duration-300 disabled:opacity-50 mb-6"
             >
@@ -63,6 +87,13 @@ export default function LoginPage() {
                 </span>
               </div>
             </div>
+
+            {/* Error Message */}
+            {error && (
+              <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
+                {error}
+              </div>
+            )}
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-5">

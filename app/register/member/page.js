@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ArrowRight, Eye, EyeOff, Check, Heart, Users, Compass, Shield } from 'lucide-react'
 import { FadeIn, ScaleIn, StaggerContainer, StaggerItem } from '../../components/AnimatedSection'
+import { auth, APIError } from '@/lib/api'
 
 const valueProps = [
   {
@@ -27,6 +29,7 @@ const valueProps = [
 ]
 
 export default function MemberRegister() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -35,12 +38,37 @@ export default function MemberRegister() {
   })
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
-    console.log('Member registration:', formData)
-    setTimeout(() => setIsLoading(false), 1500)
+    setError('')
+
+    try {
+      await auth.register({
+        email: formData.email,
+        password: formData.password,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        role: 'member',
+      })
+      // Redirect to dashboard
+      router.push('/dashboard')
+    } catch (err) {
+      if (err instanceof APIError) {
+        setError(err.message || 'Registration failed. Please try again.')
+      } else {
+        setError('Something went wrong. Please try again.')
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleGoogleSignup = () => {
+    const redirectUri = `${window.location.origin}/auth/callback`
+    window.location.href = `https://collwi.com/api/auth/google?redirect_uri=${encodeURIComponent(redirectUri)}&role=member`
   }
 
   const updateField = (field, value) => {
@@ -135,6 +163,7 @@ export default function MemberRegister() {
                 {/* Google OAuth */}
                 <button
                   type="button"
+                  onClick={handleGoogleSignup}
                   disabled={isLoading}
                   className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white border border-gray-200 rounded-2xl font-semibold text-brand-navy/70 hover:border-brand-teal/40 hover:shadow-soft transition-all duration-300 disabled:opacity-50 mb-6"
                 >
@@ -158,6 +187,13 @@ export default function MemberRegister() {
                     </span>
                   </div>
                 </div>
+
+                {/* Error Message */}
+                {error && (
+                  <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
+                    {error}
+                  </div>
+                )}
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-5">
