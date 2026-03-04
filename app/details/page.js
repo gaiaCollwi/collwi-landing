@@ -107,8 +107,8 @@ export default function DetailsPage() {
               </h2>
               <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto leading-relaxed">
                 CollWi is a social platform that turns personal growth from a lonely
-                journey into a shared, guided experience through live group coaching
-                and community.
+                journey into a shared, guided experience through community, peer support,
+                free sharing rooms and live group coaching.
               </p>
             </div>
           </FadeIn>
@@ -147,6 +147,71 @@ export default function DetailsPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-brand-navy/55 leading-relaxed">{item.desc}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ─── A Space Where You Can Be Yourself ─── */}
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-br from-brand-teal/5 via-white to-brand-purple/5">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-6">
+                A space where you can{' '}
+                <em className="text-brand-teal italic">be yourself</em>
+              </h2>
+              <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto leading-relaxed">
+                CollWi is built on community. Here&apos;s how we create space for
+                women to connect, support each other, and grow together.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-10" staggerDelay={0.1}>
+            {[
+              {
+                title: 'Community',
+                desc: 'Find women navigating challenges similar to yours. A place to connect, share, and feel understood. Because sometimes the most powerful thing is realizing you&apos;re not alone.',
+                icon: <Users size={26} />,
+                color: 'teal',
+              },
+              {
+                title: 'Sharing Rooms',
+                desc: 'Free small group conversations where you can talk openly, face to face. No pressure, no judgment — just women listening to each other.',
+                icon: <MessageCircle size={26} />,
+                color: 'purple',
+              },
+              {
+                title: 'Peer Support',
+                desc: 'Connect with other women whenever you need through sharing rooms and chat. Sometimes a short conversation is enough to feel a little lighter.',
+                icon: <Heart size={26} />,
+                color: 'coral',
+              },
+            ].map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="bg-white rounded-2xl p-8 shadow-soft card-hover">
+                  <div className="flex items-start gap-6">
+                    <div
+                      className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center ${
+                        item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
+                        item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                        'bg-brand-coral/10 text-brand-coral'
+                      }`}
+                    >
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-brand-navy mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-lg text-brand-navy/60 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </StaggerItem>
             ))}

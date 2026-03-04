@@ -24,16 +24,16 @@ const needs = [
 
 const whyItWorks = [
   {
-    icon: <Target size={26} />,
-    title: 'Guided Group Coaching',
-    desc: "You're not figuring this out alone. Professional coaches guide every session.",
-    color: 'teal',
-  },
-  {
     icon: <Users size={26} />,
     title: 'Real Connection',
     desc: "Meet women who are in the same boat. Who won't judge you for wanting more, because they get it.",
     color: 'coral',
+  },
+  {
+    icon: <Target size={26} />,
+    title: 'Guided Group Coaching',
+    desc: "You're not figuring this out alone. Professional coaches guide every session.",
+    color: 'teal',
   },
   {
     icon: <Shield size={26} />,
@@ -175,8 +175,9 @@ export default function CollWiersPage() {
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight mb-6">
                 It isn&apos;t your life.
                 <br />
-                It&apos;s that you&apos;re living it{' '}
-                <em className="text-brand-purple italic">alone.</em>
+                You&apos;re just carrying it all alone.
+                <br />
+                And you feel like wanting <em className="text-brand-purple italic">more.</em>
               </h2>
               <p className="text-xl text-brand-navy/50 max-w-2xl mx-auto">
                 You don&apos;t need another checklist. You don&apos;t need to &ldquo;try
@@ -214,9 +215,9 @@ export default function CollWiersPage() {
 
           <FadeIn delay={0.3}>
             <p className="text-center text-xl text-brand-navy/60 mt-14 max-w-3xl mx-auto leading-relaxed">
-              CollWi gives you structured group coaching that meets you where you
-              are&mdash;overwhelmed, disconnected, and ready for something{' '}
-              <strong>real</strong>.
+              CollWi gives you community, peer support and structured group coaching
+              that meet you where you are&mdash;overwhelmed, disconnected, and ready
+              for something <strong>more</strong>.
             </p>
           </FadeIn>
         </div>
