@@ -29,7 +29,7 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={0.35}>
-            <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
+            <p className="text-lg md:text-xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
               Most women know what they&apos;re capable of. They feel it — the desire for deeper 
               connection, meaningful growth, and support that actually gets them. But finding it? 
               That&apos;s the hard part.
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={0.45}>
-            <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
+            <p className="text-lg md:text-xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed mb-6">
               Personal growth shouldn&apos;t be something you do alone, buried in self-help books or 
               trying to figure it out in isolation. Real transformation happens when women come together — 
               to share, support, and grow as a community.
@@ -45,7 +45,7 @@ export default function AboutPage() {
           </FadeIn>
 
           <FadeIn delay={0.55}>
-            <p className="text-xl md:text-2xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-brand-navy/60 max-w-3xl mx-auto leading-relaxed">
               That&apos;s why we built CollWi.
             </p>
           </FadeIn>
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-brand-navy/60 leading-relaxed max-w-3xl mx-auto text-center">
-              <p className="text-lg md:text-xl">
+              <p className="text-base md:text-lg">
                 We&apos;re <span className="text-brand-navy font-medium">Barbara</span> and{' '}
                 <span className="text-brand-navy font-medium">Adriana</span>. We&apos;ve both 
                 experienced moments where we knew we were capable of more but felt stuck navigating 
@@ -154,17 +154,17 @@ export default function AboutPage() {
 
           <ScaleIn delay={0.15}>
             <div className="bg-white rounded-3xl p-10 md:p-14 shadow-soft-xl border border-gray-100">
-              <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
+              <p className="text-lg md:text-xl text-brand-navy/70 leading-relaxed mb-6">
                 We call our people <strong className="text-brand-teal">&apos;CollWiers,&apos;</strong> pronounced{' '}
                 <em className="font-semibold">&apos;CollWi(ee)er.&apos;</em>
               </p>
-              <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed mb-6">
+              <p className="text-lg md:text-xl text-brand-navy/70 leading-relaxed mb-6">
                 It&apos;s more than just a name, it&apos;s about being part of a community where 
                 everyone works through their challenges, pursues personal growth, and lifts each other up 
                 along the way.
               </p>
               <div className="mt-8 pt-8 border-t border-gray-100">
-                <p className="text-xl md:text-2xl text-brand-navy/70 leading-relaxed">
+                <p className="text-lg md:text-xl text-brand-navy/70 leading-relaxed">
                   And here&apos;s a little secret...{' '}
                   <span className="text-brand-coral font-semibold">
                     when you help others grow, you&apos;ll find yourself growing too
@@ -192,7 +192,7 @@ export default function AboutPage() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-xl text-white/80 mb-12">
+            <p className="text-lg md:text-xl text-white/80 mb-12">
               Whether you&apos;re here to find your community, explore coaching, or simply connect 
               with other women navigating life&apos;s challenges — you belong here.
             </p>

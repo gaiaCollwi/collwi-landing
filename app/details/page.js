@@ -204,10 +204,10 @@ export default function DetailsPage() {
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-semibold text-brand-navy mb-3">
+                      <h3 className="text-xl font-semibold text-brand-navy mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-lg text-brand-navy/60 leading-relaxed">
+                      <p className="text-base md:text-lg text-brand-navy/60 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
