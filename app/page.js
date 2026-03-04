@@ -118,7 +118,7 @@ export default function CollWiersPage() {
 
           <FadeIn delay={0.45}>
             <a
-              href="/register"
+              href="https://collwi.com/register"
               className="group inline-flex items-center gap-2.5 px-10 py-4.5 bg-brand-teal text-white font-semibold text-lg rounded-full shadow-teal hover:bg-brand-teal-dark hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               Start Your Journey (Free)
@@ -433,7 +433,7 @@ export default function CollWiersPage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <a
-              href="/register"
+              href="https://collwi.com/register"
               className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-bold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               Get Started Free
