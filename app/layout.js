@@ -14,6 +14,13 @@ export const metadata = {
   description:
     'Group coaching built by women, for women. $12.99/month. Certified coaches, live sessions, real support. 10x more affordable than Chief or BetterUp. Join free.',
   keywords: 'affordable coaching for women, group coaching women, women\'s coaching platform, life coaching for women, career coaching women, coaching for working moms, women support group, affordable life coach',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'CollWi | Affordable Coaching for Women ($12.99/Month)',
     description:
