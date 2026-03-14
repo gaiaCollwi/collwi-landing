@@ -10,10 +10,10 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'CollWi | Affordable Coaching for Women ($12.99/Month)',
+  title: 'CollWi | Community & Growth for Women',
   description:
-    'Group coaching built by women, for women. $12.99/month. Certified coaches, live sessions, real support. 10x more affordable than Chief or BetterUp. Join free.',
-  keywords: 'affordable coaching for women, group coaching women, women\'s coaching platform, life coaching for women, career coaching women, coaching for working moms, women support group, affordable life coach',
+    'A supportive community built by women, for women. Live group sessions, certified guides, and real connection. Join free today.',
+  keywords: 'women community, women support group, personal growth for women, group sessions women, women empowerment platform, life coaching for women, career support women, working moms community',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -22,16 +22,16 @@ export const metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'CollWi | Affordable Coaching for Women ($12.99/Month)',
+    title: 'CollWi | Community & Growth for Women',
     description:
-      'Group coaching built by women, for women. $12.99/month. Certified coaches, live sessions, real support.',
+      'A supportive community built by women, for women. Live group sessions, certified guides, and real connection.',
     type: 'website',
     siteName: 'CollWi',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CollWi | Affordable Coaching for Women',
-    description: 'Group coaching for women. $12.99/month. Built by women, for women.',
+    title: 'CollWi | Community & Growth for Women',
+    description: 'A supportive community built by women, for women. Live group sessions and real connection.',
   },
 }
 
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CollWi",
-    "description": "Affordable group coaching platform for women. Built by women, for women.",
+    "description": "A supportive community platform for women. Built by women, for women.",
     "url": "https://collwi.com",
     "logo": "https://collwi.com/collwi-logo.png",
     "founder": [
@@ -61,15 +61,8 @@ export default function RootLayout({ children }) {
     ],
     "offers": {
       "@type": "Offer",
-      "name": "Group Coaching Membership",
-      "price": "12.99",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": "12.99",
-        "priceCurrency": "USD",
-        "billingDuration": "P1M"
-      }
+      "name": "Community Membership",
+      "priceCurrency": "USD"
     }
   }
 

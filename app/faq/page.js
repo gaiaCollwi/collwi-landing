@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'FAQ | CollWi - Frequently Asked Questions',
-  description: 'Common questions about CollWi: pricing, how group coaching works, who our coaches are, and more. $12.99/month for live coaching sessions.',
+  description: 'Common questions about CollWi: pricing, how it works, who our guides are, and more. Live group sessions for women.',
 }
 
 export default function FAQPage() {
@@ -11,7 +11,7 @@ export default function FAQPage() {
     },
     {
       question: "How much does CollWi cost?",
-      answer: "CollWi costs $12.99 per month. This is 10x more affordable than platforms like Chief ($8,000/year) or BetterUp ($200-500/hour). We believe every woman deserves access to coaching, not just those who can afford premium prices."
+      answer: "CollWi offers affordable membership plans. We believe every woman deserves access to support and guidance, not just those who can afford premium prices. Check our website for current pricing."
     },
     {
       question: "How does group coaching work?",
@@ -31,7 +31,7 @@ export default function FAQPage() {
     },
     {
       question: "What makes CollWi different from other coaching platforms?",
-      answer: "Three things: (1) We're affordable—$12.99/month vs. $200-500/hour. (2) We're built by women, for women, so we understand the unique challenges women face. (3) We use group coaching, which creates community and connection, not just one-on-one sessions. You're not alone in this."
+      answer: "Three things: (1) We're affordable—a fraction of what platforms like Chief or BetterUp charge. (2) We're built by women, for women, so we understand the unique challenges women face. (3) We use group sessions, which create community and connection, not just one-on-one meetings. You're not alone in this."
     },
     {
       question: "How do I cancel?",
@@ -99,8 +99,8 @@ export default function FAQPage() {
             <h2 className="text-2xl font-bold text-center mb-8">CollWi at a Glance</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center p-6 bg-teal-50 rounded-xl">
-                <div className="text-3xl font-bold text-teal-700 mb-2">$12.99</div>
-                <div className="text-sm text-gray-600">Per month</div>
+                <div className="text-3xl font-bold text-teal-700 mb-2">Free</div>
+                <div className="text-sm text-gray-600">To join</div>
               </div>
               <div className="text-center p-6 bg-teal-50 rounded-xl">
                 <div className="text-3xl font-bold text-teal-700 mb-2">82%</div>
