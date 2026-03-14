@@ -328,7 +328,6 @@ export default function PrivacyPage() {
                 {[
                   { label: 'Customer Care', value: 'care@collwi.com', href: 'mailto:care@collwi.com' },
                   { label: 'Tech Support', value: 'support@collwi.com', href: 'mailto:support@collwi.com' },
-                  { label: 'Phone', value: '858.389.1584', href: 'tel:8583891584' },
                 ].map((contact, i) => (
                   <div
                     key={i}
