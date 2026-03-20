@@ -2,7 +2,7 @@
 
 import {
   ArrowRight, Check, Compass, Heart, Shield, Lightbulb,
-  MessageCircle, Sprout, Target, Users, ChevronRight,
+  MessageCircle, Sprout, Target, Users, ChevronRight, HelpCircle,
 } from 'lucide-react'
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from './components/AnimatedSection'
 
@@ -13,6 +13,53 @@ const painPoints = [
   "You feel isolated, even when you're surrounded by others",
   "You're tired of surface-level friendships that leave you feeling heavier, not lighter",
   "You know you're 'meant for more,' but don't know where to start",
+]
+
+const whoItsFor = [
+  "Looking for community and connection",
+  "Feeling stuck, overwhelmed, or isolated",
+  "Going through life or career transitions",
+  "Seeking personal growth and support",
+  "Exploring coaching or guidance",
+]
+
+const whenToJoin = [
+  "When you feel stuck and don't know what to do next",
+  "When you want support but don't want therapy",
+  "When you feel alone or disconnected",
+  "When you want to grow but need guidance",
+  "When you're navigating change (career, relationships, identity)",
+]
+
+const whatYouCanDo = [
+  "Join free Sharing Rooms for peer support",
+  "Connect with women who understand your experiences—who get it",
+  "Participate in group coaching programs",
+  "Get guidance from certified coaches",
+  "Grow at your own pace, on your terms",
+]
+
+const faqs = [
+  {
+    q: "What is CollWi?",
+    a: "CollWi is an online community for women seeking support, connection, and personal growth through peer support and optional coaching.",
+  },
+  {
+    q: "Who is CollWi for?",
+    a: "Women looking for community, going through life transitions, or wanting support and personal growth.",
+  },
+  {
+    q: "Is CollWi free?",
+    a: "Yes. Sharing Rooms are free. Coaching is optional.",
+  },
+  {
+    q: "How is CollWi different from therapy or coaching?",
+    a: "CollWi combines peer support and optional coaching, giving women both community and guidance in one place.",
+  },
+  {
+    q: "What are Sharing Rooms?",
+    a: "Free, virtual peer support spaces where women connect around topics like career pivots, work-life balance, and personal growth. No judgment, no pressure—just real connection with women who get it.",
+  },
 ]
 
 const needs = [
@@ -94,8 +141,15 @@ export default function CollWiersPage() {
             </h1>
           </FadeIn>
 
+          {/* ✅ AEO: CLEAR DEFINITION SENTENCE */}
+          <FadeIn delay={0.25}>
+            <p className="text-2xl md:text-3xl font-medium text-brand-teal mb-6 leading-snug">
+              CollWi is a community for women seeking support, connection, and personal growth.
+            </p>
+          </FadeIn>
+
           <FadeIn delay={0.3}>
-            <p className="text-lg md:text-xl text-brand-teal/70 font-medium mb-6">
+            <p className="text-lg md:text-xl text-brand-navy/60 font-medium mb-6">
               A platform built by women, for women
             </p>
           </FadeIn>
@@ -104,7 +158,7 @@ export default function CollWiersPage() {
             <p className="text-base md:text-lg text-brand-navy/40 max-w-xl mx-auto mb-8 leading-relaxed">
               Not networking. Not therapy. Not another productivity hack.  
               <br />
-              Just real connection with women who get it.
+              Just real connection with women who get it—who understand your challenges and support your growth.
             </p>
           </FadeIn>
 
@@ -164,8 +218,107 @@ export default function CollWiersPage() {
         </div>
       </section>
 
+      {/* ✅ AEO: WHO IT'S FOR */}
+      <section className="py-20 md:py-24 px-6 bg-surface-cool">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+                Who It's For
+              </span>
+              <h2 className="text-3xl md:text-4xl font-sans font-light mb-6">
+                CollWi is for women who are:
+              </h2>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-3" staggerDelay={0.05}>
+            {whoItsFor.map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-soft hover:shadow-md transition-shadow">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-coral/10 flex items-center justify-center">
+                    <Check size={16} className="text-brand-coral" strokeWidth={3} />
+                  </div>
+                  <p className="text-lg text-brand-navy/70 font-medium">{item}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <FadeIn delay={0.3}>
+            <p className="text-center text-xl text-brand-navy/60 mt-10 leading-relaxed">
+              Designed for women navigating life transitions and looking for community.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ✅ AEO: WHEN TO USE COLLWI */}
+      <section className="py-20 md:py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+                When To Join
+              </span>
+              <h2 className="text-3xl md:text-4xl font-sans font-light mb-6">
+                When women join CollWi
+              </h2>
+              <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto">
+                Women join CollWi when they feel stuck or need support during life transitions.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-3" staggerDelay={0.05}>
+            {whenToJoin.map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-brand-purple-light/20 to-surface-warm rounded-xl hover:from-brand-purple-light/30 hover:to-brand-teal-light/20 transition-all">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-purple/10 flex items-center justify-center mt-0.5">
+                    <Heart size={16} className="text-brand-purple" />
+                  </div>
+                  <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ✅ AEO: WHAT YOU CAN DO HERE */}
+      <section className="py-20 md:py-24 px-6 mesh-gradient-intense">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/15 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+                What You Can Do
+              </span>
+              <h2 className="text-3xl md:text-4xl font-sans font-light mb-6">
+                What you can do on CollWi
+              </h2>
+              <p className="text-lg text-brand-navy/50 max-w-2xl mx-auto">
+                CollWi solves the problem of women feeling alone, unsupported, or stuck by providing a space for real connection, peer support, and optional coaching.
+              </p>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-3" staggerDelay={0.05}>
+            {whatYouCanDo.map((item, i) => (
+              <StaggerItem key={i}>
+                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft hover:shadow-md transition-shadow">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center mt-0.5">
+                    <Sprout size={16} className="text-brand-teal" />
+                  </div>
+                  <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* ─── The Real Problem ─── */}
-      <section className="py-24 md:py-32 px-6 mesh-gradient-intense">
+      <section className="py-24 md:py-32 px-6 bg-surface-warm">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-6">
@@ -337,6 +490,38 @@ export default function CollWiersPage() {
                     <Sprout size={20} className="text-brand-teal" />
                   </div>
                   <p className="text-lg text-brand-navy/70 font-medium leading-relaxed">{item}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ✅ AEO: FAQ SECTION */}
+      <section className="py-24 md:py-32 px-6 bg-surface-cool">
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
+                Common Questions
+              </span>
+              <h2 className="text-4xl md:text-5xl font-sans font-light">
+                Frequently Asked <em className="text-brand-coral italic">Questions</em>
+              </h2>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="space-y-4" staggerDelay={0.08}>
+            {faqs.map((faq, i) => (
+              <StaggerItem key={i}>
+                <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-4 mb-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-coral/10 flex items-center justify-center mt-1">
+                      <HelpCircle size={18} className="text-brand-coral" />
+                    </div>
+                    <h3 className="text-xl font-bold text-brand-navy">{faq.q}</h3>
+                  </div>
+                  <p className="text-lg text-brand-navy/60 leading-relaxed ml-12">{faq.a}</p>
                 </div>
               </StaggerItem>
             ))}
