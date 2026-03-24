@@ -128,7 +128,7 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-light leading-[1.1] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extralight leading-[1.1] mb-8">
               You&apos;re exhausted.
               <br />
               You&apos;re overwhelmed.
