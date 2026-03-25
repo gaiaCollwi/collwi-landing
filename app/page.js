@@ -111,6 +111,20 @@ const outcomes = [
   "You'll believe your dreams are still possible \u2014 and take steps toward them",
 ]
 
+const painPointColors = ['brand-teal', 'brand-coral', 'brand-purple', 'brand-teal', 'brand-coral', 'brand-purple']
+const painPointDirections = ['left', 'right', 'left', 'right', 'left', 'right']
+
+const whoItsForIcons = [Users, Heart, Compass, Target, Sprout]
+const whoItsForColors = ['teal', 'coral', 'purple', 'gold', 'teal']
+
+const whenEmojis = ['\u{1F300}', '\u{1F4A1}', '\u{1F91D}', '\u{1F331}', '\u{1F504}']
+const whenColors = ['brand-teal', 'brand-coral', 'brand-purple', 'brand-gold', 'brand-teal']
+
+const whatColors = ['teal', 'coral', 'purple', 'gold', 'teal']
+
+const outcomeIcons = [Sprout, Heart, Lightbulb, Users, Shield, Target]
+const outcomeColors = ['teal', 'coral', 'purple', 'gold', 'teal', 'coral']
+
 export default function CollWiersPage() {
   return (
     <div className="min-h-screen">
@@ -156,7 +170,7 @@ export default function CollWiersPage() {
 
           <FadeIn delay={0.32}>
             <p className="text-base md:text-lg text-brand-navy/40 max-w-xl mx-auto mb-8 leading-relaxed">
-              Not networking. Not therapy. Not another productivity hack.  
+              Not networking. Not therapy. Not another productivity hack.
               <br />
               Just real connection with women who get it—who understand your challenges and support your growth.
             </p>
@@ -184,8 +198,13 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── This Is For You ─── */}
-      <section className="py-24 md:py-32 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden mesh-gradient-warm">
+        {/* Floating decorative orbs */}
+        <div className="absolute top-20 left-[10%] w-64 h-64 bg-brand-teal/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-[8%] w-56 h-56 bg-brand-coral/10 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 right-[25%] w-40 h-40 bg-brand-purple/8 rounded-full blur-3xl animate-float-slow" />
+
+        <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
@@ -197,12 +216,19 @@ export default function CollWiersPage() {
           <StaggerContainer className="grid md:grid-cols-2 gap-4" staggerDelay={0.06}>
             {painPoints.map((item, i) => (
               <StaggerItem key={i} className="h-full">
-                <div className="flex items-start gap-4 p-6 rounded-2xl bg-surface-warm hover:bg-brand-teal-light/50 transition-colors duration-300 group h-full">
-                  <div className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-teal flex items-center justify-center mt-0.5">
-                    <Check size={14} className="text-white" strokeWidth={3} />
+                <FadeIn direction={painPointDirections[i]} delay={i * 0.04}>
+                  <div className={`relative flex items-start gap-4 p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/40 hover:bg-white/80 hover:shadow-soft-lg hover:backdrop-blur-xl transition-all duration-300 group h-full border-l-4 border-l-${painPointColors[i]}`}
+                    style={{ borderLeftColor: i % 3 === 0 ? '#4ECDC4' : i % 3 === 1 ? '#F4845F' : '#7C5CBF' }}>
+                    {/* Large subtle number decoration */}
+                    <span className="absolute top-2 right-4 text-6xl font-sans font-bold text-brand-navy/[0.04] select-none leading-none">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-teal flex items-center justify-center mt-0.5">
+                      <Check size={14} className="text-white" strokeWidth={3} />
+                    </div>
+                    <p className="text-lg text-brand-navy/70 leading-relaxed group-hover:text-brand-navy transition-colors">{item}</p>
                   </div>
-                  <p className="text-lg text-brand-navy/70 leading-relaxed group-hover:text-brand-navy transition-colors">{item}</p>
-                </div>
+                </FadeIn>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -219,8 +245,15 @@ export default function CollWiersPage() {
       </section>
 
       {/* ✅ AEO: WHO IT'S FOR */}
-      <section className="py-20 md:py-24 px-6 bg-surface-cool">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-20 md:py-24 px-6 overflow-hidden mesh-gradient-cool">
+        {/* Decorative watermark */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+          <span className="text-[10rem] md:text-[14rem] font-sans font-bold text-brand-teal/[0.03] leading-none tracking-tight whitespace-nowrap">
+            FOR YOU
+          </span>
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -232,17 +265,27 @@ export default function CollWiersPage() {
             </div>
           </FadeIn>
 
-          <StaggerContainer className="space-y-3" staggerDelay={0.05}>
-            {whoItsFor.map((item, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-soft hover:shadow-md transition-shadow">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-coral/10 flex items-center justify-center">
-                    <Check size={16} className="text-brand-coral" strokeWidth={3} />
+          <StaggerContainer className="grid md:grid-cols-3 sm:grid-cols-2 gap-5" staggerDelay={0.08}>
+            {whoItsFor.map((item, i) => {
+              const IconComp = whoItsForIcons[i]
+              const color = whoItsForColors[i]
+              const bgMap = { teal: 'bg-brand-teal/8', coral: 'bg-brand-coral/8', purple: 'bg-brand-purple/8', gold: 'bg-brand-gold/8' }
+              const iconBgMap = { teal: 'bg-brand-teal/15 text-brand-teal', coral: 'bg-brand-coral/15 text-brand-coral', purple: 'bg-brand-purple/15 text-brand-purple', gold: 'bg-brand-gold/15 text-brand-gold' }
+              return (
+                <StaggerItem key={i}>
+                  <div className={`relative ${bgMap[color]} rounded-2xl p-7 hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 h-full`}>
+                    {/* Large subtle number */}
+                    <span className="absolute top-3 right-4 text-5xl font-sans font-bold text-brand-navy/[0.04] select-none leading-none">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${iconBgMap[color]}`}>
+                      <IconComp size={22} />
+                    </div>
+                    <p className="text-lg text-brand-navy/70 font-medium">{item}</p>
                   </div>
-                  <p className="text-lg text-brand-navy/70 font-medium">{item}</p>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              )
+            })}
           </StaggerContainer>
 
           <FadeIn delay={0.3}>
@@ -254,8 +297,12 @@ export default function CollWiersPage() {
       </section>
 
       {/* ✅ AEO: WHEN TO USE COLLWI */}
-      <section className="py-20 md:py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-20 md:py-24 px-6 overflow-hidden mesh-gradient-warm">
+        {/* Floating orbs */}
+        <div className="absolute top-16 right-[12%] w-48 h-48 bg-brand-purple/8 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-16 left-[10%] w-40 h-40 bg-brand-teal/8 rounded-full blur-3xl animate-float-delayed" />
+
+        <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -270,24 +317,44 @@ export default function CollWiersPage() {
             </div>
           </FadeIn>
 
-          <StaggerContainer className="space-y-3" staggerDelay={0.05}>
-            {whenToJoin.map((item, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-brand-purple-light/20 to-surface-warm rounded-xl hover:from-brand-purple-light/30 hover:to-brand-teal-light/20 transition-all">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-purple/10 flex items-center justify-center mt-0.5">
-                    <Heart size={16} className="text-brand-purple" />
+          {/* Vertical timeline */}
+          <div className="relative">
+            {/* Connecting line (desktop) */}
+            <div className="hidden md:block absolute left-8 top-4 bottom-4 w-px bg-gradient-to-b from-brand-teal/30 via-brand-purple/30 to-brand-coral/30" />
+
+            <div className="space-y-5">
+              {whenToJoin.map((item, i) => (
+                <FadeIn key={i} delay={i * 0.08} direction={i % 2 === 0 ? 'left' : 'right'}>
+                  <div className="flex items-start gap-5 md:ml-0">
+                    {/* Emoji timeline dot */}
+                    <div className="hidden md:flex flex-shrink-0 w-16 h-16 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/40 items-center justify-center text-2xl z-10"
+                      style={{ borderTopColor: i % 3 === 0 ? '#4ECDC4' : i % 3 === 1 ? '#F4845F' : '#7C5CBF', borderTopWidth: '3px' }}>
+                      {whenEmojis[i]}
+                    </div>
+                    <div className="flex-1 bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/80 hover:shadow-soft-lg transition-all duration-300"
+                      style={{ borderLeftColor: i % 3 === 0 ? '#4ECDC4' : i % 3 === 1 ? '#F4845F' : '#7C5CBF', borderLeftWidth: '3px' }}>
+                      <div className="flex items-start gap-4">
+                        <span className="md:hidden text-2xl">{whenEmojis[i]}</span>
+                        <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ✅ AEO: WHAT YOU CAN DO HERE */}
-      <section className="py-20 md:py-24 px-6 mesh-gradient-intense">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-20 md:py-24 px-6 mesh-gradient-intense overflow-hidden">
+        {/* Subtle floating dots */}
+        <div className="absolute top-24 left-[15%] w-3 h-3 bg-brand-teal/20 rounded-full animate-pulse-soft" />
+        <div className="absolute top-40 right-[20%] w-2 h-2 bg-brand-coral/25 rounded-full animate-pulse-soft" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-32 left-[30%] w-4 h-4 bg-brand-purple/15 rounded-full animate-pulse-soft" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-20 right-[35%] w-2.5 h-2.5 bg-brand-gold/20 rounded-full animate-pulse-soft" style={{ animationDelay: '0.5s' }} />
+
+        <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-brand-teal/15 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -303,23 +370,40 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <StaggerContainer className="space-y-3" staggerDelay={0.05}>
-            {whatYouCanDo.map((item, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft hover:shadow-md transition-shadow">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center mt-0.5">
-                    <Sprout size={16} className="text-brand-teal" />
+            {whatYouCanDo.map((item, i) => {
+              const accentColors = ['#4ECDC4', '#F4845F', '#7C5CBF', '#F7C948', '#4ECDC4']
+              const iconBgs = ['bg-brand-teal/10 text-brand-teal', 'bg-brand-coral/10 text-brand-coral', 'bg-brand-purple/10 text-brand-purple', 'bg-brand-gold/10 text-brand-gold', 'bg-brand-teal/10 text-brand-teal']
+              return (
+                <StaggerItem key={i}>
+                  <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-soft hover:shadow-soft-lg hover:border-l-4 transition-all duration-300 border border-transparent"
+                    style={{ borderLeftColor: 'transparent' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.borderLeftColor = accentColors[i]; e.currentTarget.style.borderLeftWidth = '4px' }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderLeftColor = 'transparent'; e.currentTarget.style.borderLeftWidth = '1px' }}>
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-full ${iconBgs[i]} flex items-center justify-center mt-0.5`}>
+                      <Check size={16} strokeWidth={3} style={{ color: accentColors[i] }} />
+                    </div>
+                    <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
                   </div>
-                  <p className="text-lg text-brand-navy/70 leading-relaxed">{item}</p>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              )
+            })}
           </StaggerContainer>
         </div>
       </section>
 
       {/* ─── The Real Problem ─── */}
-      <section className="py-24 md:py-32 px-6 bg-surface-warm">
-        <div className="max-w-5xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden mesh-gradient-warm">
+        {/* Floating orbs */}
+        <div className="absolute top-20 right-[10%] w-72 h-72 bg-brand-coral/8 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-24 left-[5%] w-60 h-60 bg-brand-teal/8 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/3 left-[40%] w-48 h-48 bg-brand-purple/6 rounded-full blur-3xl animate-float-slow" />
+
+        {/* Decorative pulsing dots */}
+        <div className="absolute top-32 left-[20%] w-2.5 h-2.5 bg-brand-coral/30 rounded-full animate-pulse-soft" />
+        <div className="absolute bottom-40 right-[25%] w-3 h-3 bg-brand-teal/25 rounded-full animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 right-[15%] w-2 h-2 bg-brand-purple/30 rounded-full animate-pulse-soft" style={{ animationDelay: '0.8s' }} />
+
+        <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-6">
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -348,12 +432,12 @@ export default function CollWiersPage() {
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
             {needs.map((item, i) => (
               <StaggerItem key={i}>
-                <div className="bg-white rounded-2xl p-8 shadow-soft card-hover h-full">
+                <div className="bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-8 hover:bg-white/80 hover:shadow-soft-lg hover:border-white/60 transition-all duration-300 h-full group">
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                      item.color === 'coral' ? 'bg-brand-coral/10 text-brand-coral' :
-                      item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
-                      item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-shadow duration-300 ${
+                      item.color === 'coral' ? 'bg-brand-coral/10 text-brand-coral group-hover:shadow-glow-coral' :
+                      item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal group-hover:shadow-glow-teal' :
+                      item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple group-hover:shadow-glow-purple' :
                       'bg-brand-gold/10 text-brand-gold'
                     }`}
                   >
@@ -377,8 +461,14 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── Why CollWi Works ─── */}
-      <section className="py-24 md:py-32 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden mesh-gradient-purple">
+        {/* Floating decorative elements */}
+        <div className="absolute top-16 right-[8%] w-52 h-52 bg-brand-purple/6 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 left-[12%] w-44 h-44 bg-brand-teal/6 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/3 left-[5%] w-2 h-2 bg-brand-teal/30 rounded-full animate-pulse-soft" />
+        <div className="absolute bottom-1/3 right-[10%] w-3 h-3 bg-brand-coral/25 rounded-full animate-pulse-soft" style={{ animationDelay: '1s' }} />
+
+        <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
             <div className="text-center mb-6">
               <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -396,26 +486,35 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <div className="mt-14 space-y-5">
-            {whyItWorks.map((item, i) => (
-              <FadeIn key={i} delay={i * 0.08}>
-                <div className="group flex items-start gap-6 p-7 md:p-8 rounded-2xl border border-gray-100 card-hover">
-                  <div
-                    className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center ${
-                      item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
-                      item.color === 'coral' ? 'bg-brand-coral/10 text-brand-coral' :
-                      item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
-                      'bg-brand-gold/10 text-brand-gold'
-                    }`}
-                  >
-                    {item.icon}
+            {whyItWorks.map((item, i) => {
+              const glowMap = { coral: 'hover:shadow-glow-coral', teal: 'hover:shadow-glow-teal', purple: 'hover:shadow-glow-purple', gold: 'hover:shadow-soft-lg' }
+              const borderColorMap = { coral: '#F4845F', teal: '#4ECDC4', purple: '#7C5CBF', gold: '#F7C948' }
+              return (
+                <FadeIn key={i} delay={i * 0.08} direction={i % 2 === 0 ? 'left' : 'right'}>
+                  <div className={`group relative flex items-start gap-6 p-7 md:p-8 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/40 ${glowMap[item.color]} transition-all duration-300 hover:-translate-y-0.5`}
+                    style={{ borderLeftWidth: '4px', borderLeftColor: borderColorMap[item.color] }}>
+                    {/* Large number decoration */}
+                    <span className="absolute top-3 right-5 text-7xl font-sans font-bold text-brand-navy/[0.04] select-none leading-none">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div
+                      className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center ${
+                        item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
+                        item.color === 'coral' ? 'bg-brand-coral/10 text-brand-coral' :
+                        item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                        'bg-brand-gold/10 text-brand-gold'
+                      }`}
+                    >
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <p className="text-brand-navy/55 leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-brand-navy/55 leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              )
+            })}
           </div>
 
           <FadeIn delay={0.3}>
@@ -428,8 +527,12 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── How It Works ─── */}
-      <section className="py-24 md:py-32 px-6 bg-surface-warm">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 bg-surface-warm overflow-hidden">
+        {/* Gradient orbs */}
+        <div className="absolute top-12 right-[15%] w-56 h-56 bg-brand-teal/6 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-16 left-[10%] w-48 h-48 bg-brand-purple/6 rounded-full blur-3xl animate-float-delayed" />
+
+        <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -441,21 +544,35 @@ export default function CollWiersPage() {
             </div>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="relative grid sm:grid-cols-2 gap-6">
+            {/* Connecting dotted lines between cards on desktop */}
+            <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px border-t-2 border-dashed border-brand-teal/20" />
+            <div className="hidden sm:block absolute top-1/4 left-1/2 -translate-x-1/2 h-1/2 w-px border-l-2 border-dashed border-brand-purple/15" />
+
             {[
               { num: '01', title: 'Join a Group', desc: 'Small, intimate coaching groups led by certified coaches' },
               { num: '02', title: 'Show Up', desc: 'Weekly sessions designed to help you process, connect, and grow' },
               { num: '03', title: 'Get Support', desc: 'Between sessions, stay connected with your group and coach' },
               { num: '04', title: 'Move Forward', desc: 'With clarity, tools, and a community that actually gets it' },
-            ].map((step, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-8 shadow-soft card-hover h-full">
-                  <span className="text-4xl font-sans font-light text-brand-teal/20 mb-4 block">{step.num}</span>
-                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-brand-navy/55 leading-relaxed">{step.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
+            ].map((step, i) => {
+              const numGradients = [
+                'text-gradient-teal',
+                'text-gradient-warm',
+                'text-gradient-purple',
+                'text-gradient-teal',
+              ]
+              const topBorderColors = ['#4ECDC4', '#F4845F', '#7C5CBF', '#F7C948']
+              return (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <div className="relative bg-white/70 backdrop-blur-sm border border-white/40 rounded-2xl p-8 hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 h-full"
+                    style={{ borderTopWidth: '3px', borderTopColor: topBorderColors[i] }}>
+                    <span className={`text-5xl font-sans font-bold mb-4 block ${numGradients[i]}`}>{step.num}</span>
+                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-brand-navy/55 leading-relaxed">{step.desc}</p>
+                  </div>
+                </FadeIn>
+              )
+            })}
           </div>
 
           <FadeIn delay={0.3}>
@@ -467,8 +584,13 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── What Changes ─── */}
-      <section className="py-24 md:py-32 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden mesh-gradient-cool">
+        {/* Floating orbs */}
+        <div className="absolute top-20 left-[8%] w-56 h-56 bg-brand-teal/8 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-24 right-[12%] w-48 h-48 bg-brand-purple/6 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 right-[30%] w-40 h-40 bg-brand-coral/5 rounded-full blur-3xl animate-float-slow" />
+
+        <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
               <span className="inline-block px-4 py-1.5 bg-brand-gold/15 text-brand-gold text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -482,24 +604,34 @@ export default function CollWiersPage() {
             </div>
           </FadeIn>
 
-          <StaggerContainer className="space-y-4" staggerDelay={0.06}>
-            {outcomes.map((item, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-surface-cool to-brand-teal-light/30 hover:from-brand-teal-light/50 hover:to-brand-teal-light/40 transition-all duration-300">
-                  <div className="flex-shrink-0 w-10 h-10 bg-brand-teal/10 rounded-xl flex items-center justify-center">
-                    <Sprout size={20} className="text-brand-teal" />
+          <StaggerContainer className="grid sm:grid-cols-2 gap-4" staggerDelay={0.06}>
+            {outcomes.map((item, i) => {
+              const IconComp = outcomeIcons[i]
+              const color = outcomeColors[i]
+              const iconBgMap = {
+                teal: 'bg-brand-teal/12 text-brand-teal',
+                coral: 'bg-brand-coral/12 text-brand-coral',
+                purple: 'bg-brand-purple/12 text-brand-purple',
+                gold: 'bg-brand-gold/12 text-brand-gold',
+              }
+              return (
+                <StaggerItem key={i}>
+                  <div className="flex items-center gap-4 p-5 md:p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/30 hover:bg-white/80 hover:-translate-y-0.5 hover:shadow-soft-lg transition-all duration-300">
+                    <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${iconBgMap[color]}`}>
+                      <IconComp size={20} />
+                    </div>
+                    <p className="text-lg text-brand-navy/70 font-medium leading-relaxed">{item}</p>
                   </div>
-                  <p className="text-lg text-brand-navy/70 font-medium leading-relaxed">{item}</p>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              )
+            })}
           </StaggerContainer>
         </div>
       </section>
 
       {/* ✅ AEO: FAQ SECTION */}
-      <section className="py-24 md:py-32 px-6 bg-surface-cool">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden mesh-gradient-cool">
+        <div className="relative z-10 max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
               <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
@@ -512,26 +644,41 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <StaggerContainer className="space-y-4" staggerDelay={0.08}>
-            {faqs.map((faq, i) => (
-              <StaggerItem key={i}>
-                <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-md transition-shadow">
-                  <div className="flex items-start gap-4 mb-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-coral/10 flex items-center justify-center mt-1">
-                      <HelpCircle size={18} className="text-brand-coral" />
+            {faqs.map((faq, i) => {
+              const borderColors = ['#F4845F', '#4ECDC4', '#F4845F', '#4ECDC4', '#F4845F']
+              return (
+                <StaggerItem key={i}>
+                  <div className="bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-7 hover:bg-white/80 hover:shadow-soft-lg transition-all duration-300"
+                    style={{ borderLeftWidth: '4px', borderLeftColor: borderColors[i] }}>
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-coral/10 flex items-center justify-center mt-1">
+                        <HelpCircle size={20} className="text-brand-coral" />
+                      </div>
+                      <h3 className="text-xl font-bold text-brand-navy">{faq.q}</h3>
                     </div>
-                    <h3 className="text-xl font-bold text-brand-navy">{faq.q}</h3>
+                    <p className="text-lg text-brand-navy/60 leading-relaxed ml-14">{faq.a}</p>
                   </div>
-                  <p className="text-lg text-brand-navy/60 leading-relaxed ml-12">{faq.a}</p>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              )
+            })}
           </StaggerContainer>
         </div>
       </section>
 
       {/* ─── You Deserve More ─── */}
-      <section className="py-24 md:py-32 px-6 mesh-gradient-intense">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative py-24 md:py-32 px-6 mesh-gradient-intense overflow-hidden">
+        {/* Extra floating orbs */}
+        <div className="absolute top-16 left-[8%] w-64 h-64 bg-brand-teal/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-[6%] w-56 h-56 bg-brand-coral/8 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 left-[50%] w-40 h-40 bg-brand-purple/8 rounded-full blur-3xl animate-float-slow" />
+
+        {/* Sparkle decorations */}
+        <div className="absolute top-24 right-[20%] w-1.5 h-1.5 bg-brand-gold/40 rounded-full animate-pulse-soft" />
+        <div className="absolute top-40 left-[25%] w-2 h-2 bg-brand-teal/30 rounded-full animate-pulse-soft" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-32 right-[40%] w-1.5 h-1.5 bg-brand-coral/35 rounded-full animate-pulse-soft" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-48 left-[15%] w-2 h-2 bg-brand-purple/25 rounded-full animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
+
+        <div className="relative z-10 max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
@@ -550,19 +697,21 @@ export default function CollWiersPage() {
           </FadeIn>
 
           <ScaleIn delay={0.2}>
-            <div className="bg-white rounded-3xl p-10 md:p-14 shadow-soft-xl border border-gray-100">
-              <p className="text-2xl font-sans font-light mb-8 text-brand-navy">But here&apos;s the truth:</p>
-              <div className="space-y-5 text-xl text-brand-navy/65 leading-relaxed">
-                <p>
-                  You can be grateful <em className="text-brand-teal font-semibold italic">and</em> want more.
-                </p>
-                <p>
-                  You can have a stable life <em className="text-brand-teal font-semibold italic">and</em> crave
-                  meaning, connection, and purpose.
-                </p>
-                <p>
-                  You don&apos;t have to wait until everything falls apart to ask for support.
-                </p>
+            <div className="relative rounded-3xl p-[2px] bg-gradient-to-br from-brand-teal via-brand-purple to-brand-coral hover:shadow-glow-teal transition-shadow duration-500">
+              <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-10 md:p-14">
+                <p className="text-2xl font-sans font-light mb-8 text-brand-navy">But here&apos;s the truth:</p>
+                <div className="space-y-5 text-xl text-brand-navy/65 leading-relaxed">
+                  <p>
+                    You can be grateful <em className="text-brand-teal font-semibold italic">and</em> want more.
+                  </p>
+                  <p>
+                    You can have a stable life <em className="text-brand-teal font-semibold italic">and</em> crave
+                    meaning, connection, and purpose.
+                  </p>
+                  <p>
+                    You don&apos;t have to wait until everything falls apart to ask for support.
+                  </p>
+                </div>
               </div>
             </div>
           </ScaleIn>
@@ -579,18 +728,28 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── Quote ─── */}
-      <section className="py-20 md:py-28 px-6 mesh-gradient-dark">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="relative py-20 md:py-28 px-6 mesh-gradient-dark overflow-hidden">
+        {/* Floating glow orbs */}
+        <div className="absolute top-10 left-[15%] w-48 h-48 bg-brand-teal/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-[10%] w-40 h-40 bg-brand-purple/10 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 right-[30%] w-32 h-32 bg-brand-coral/8 rounded-full blur-3xl animate-float-slow" />
+
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
           <FadeIn>
-            <p className="text-2xl md:text-3xl font-sans italic text-white/85 mb-6 leading-relaxed">
-              &ldquo;I know this can&apos;t be all there is&hellip;
-              <br />
-              but I don&apos;t know where to start.&rdquo;
-            </p>
-            <div className="w-12 h-px bg-brand-teal mx-auto mb-6" />
-            <p className="text-lg text-white/50">
-              You don&apos;t have to know. That&apos;s what we&apos;re here for.
-            </p>
+            {/* Animated gradient border around quote */}
+            <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-brand-teal/40 via-brand-purple/40 to-brand-coral/40" style={{ backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease-in-out infinite' }}>
+              <div className="bg-brand-navy/80 backdrop-blur-xl rounded-3xl py-12 px-8 md:px-12">
+                <p className="text-2xl md:text-3xl font-sans italic text-white/85 mb-6 leading-relaxed">
+                  &ldquo;I know this can&apos;t be all there is&hellip;
+                  <br />
+                  but I don&apos;t know where to start.&rdquo;
+                </p>
+                <div className="w-12 h-px bg-brand-teal mx-auto mb-6" />
+                <p className="text-lg text-white/50">
+                  You don&apos;t have to know. That&apos;s what we&apos;re here for.
+                </p>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -602,6 +761,16 @@ export default function CollWiersPage() {
           <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-20 w-48 h-48 bg-brand-gold rounded-full blur-3xl" />
         </div>
+
+        {/* Animated gradient orbs */}
+        <div className="absolute top-20 left-[10%] w-48 h-48 bg-white/8 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-16 right-[8%] w-56 h-56 bg-brand-purple/15 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 left-[40%] w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl animate-float-slow" />
+
+        {/* Pulsing dots */}
+        <div className="absolute top-24 right-[30%] w-2 h-2 bg-white/20 rounded-full animate-pulse-soft" />
+        <div className="absolute bottom-32 left-[25%] w-3 h-3 bg-white/15 rounded-full animate-pulse-soft" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/3 left-[15%] w-2 h-2 bg-white/20 rounded-full animate-pulse-soft" style={{ animationDelay: '2s' }} />
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
@@ -620,10 +789,13 @@ export default function CollWiersPage() {
           <FadeIn delay={0.2}>
             <a
               href="https://collwi.com/register"
-              className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-bold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-teal-dark font-bold text-lg rounded-full shadow-soft-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
-              Get Started Free
-              <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+              <span className="relative z-10 flex items-center gap-3">
+                Get Started Free
+                <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+              </span>
             </a>
           </FadeIn>
         </div>
