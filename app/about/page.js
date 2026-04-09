@@ -321,8 +321,8 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-lg md:text-xl text-white/80 mb-12">
-              Whether you&apos;re here to find your community, explore coaching, or simply connect
-              with other women navigating life&apos;s challenges — you belong here.
+              Thousands of women are already walking this path together. 
+              What&apos;s waiting for you on the other side of &ldquo;I can&apos;t do this alone&rdquo;?
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>

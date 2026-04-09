@@ -206,7 +206,11 @@ export default function CollWiersPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
+              <p className="text-2xl md:text-3xl font-sans font-light mb-10">
+                You&apos;re not broken. You&apos;re just carrying too much,{' '}
+                <em className="text-brand-coral italic">alone.</em>
+              </p>
               <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
                 This is for you <em className="text-brand-teal italic">if&hellip;</em>
               </h2>
@@ -232,15 +236,6 @@ export default function CollWiersPage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-
-          <FadeIn delay={0.3}>
-            <div className="mt-14 text-center">
-              <p className="text-2xl md:text-3xl font-sans font-light">
-                You&apos;re not broken. You&apos;re just carrying too much,{' '}
-                <em className="text-brand-coral italic">alone.</em>
-              </p>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -405,7 +400,7 @@ export default function CollWiersPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto">
           <FadeIn>
-            <div className="text-center mb-6">
+            <div className="text-center mb-8">
               <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Real Problem
               </span>
@@ -416,17 +411,29 @@ export default function CollWiersPage() {
                 <br />
                 And you feel like wanting <em className="text-brand-purple italic">more.</em>
               </h2>
-              <p className="text-xl text-brand-navy/50 max-w-2xl mx-auto">
-                You don&apos;t need another checklist. You don&apos;t need to &ldquo;try
-                harder&rdquo; or &ldquo;think more positively.&rdquo;
-              </p>
             </div>
           </FadeIn>
 
+          {/* Side by side: text + image */}
           <FadeIn delay={0.1}>
-            <p className="text-center text-lg text-brand-navy/50 mb-14 max-w-xl mx-auto">
-              What you need is:
-            </p>
+            <div className="grid md:grid-cols-2 gap-10 items-center mb-14">
+              <div>
+                <p className="text-xl text-brand-navy/50 mb-4 leading-relaxed">
+                  You don&apos;t need another checklist. You don&apos;t need to &ldquo;try
+                  harder&rdquo; or &ldquo;think more positively.&rdquo;
+                </p>
+                <p className="text-lg text-brand-navy/50">
+                  What you need is:
+                </p>
+              </div>
+              <div className="relative h-64 md:h-72 rounded-2xl overflow-hidden shadow-soft-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+                  alt="Women supporting each other"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </FadeIn>
 
           <StaggerContainer className="grid sm:grid-cols-2 gap-6" staggerDelay={0.08}>
@@ -681,7 +688,7 @@ export default function CollWiersPage() {
         <div className="relative z-10 max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight break-words hyphens-none">
                 You deserve more than{' '}
                 <em className="text-brand-coral italic">&ldquo;fine.&rdquo;</em>
               </h2>
@@ -728,7 +735,7 @@ export default function CollWiersPage() {
       </section>
 
       {/* ─── Quote ─── */}
-      <section className="relative py-20 md:py-28 px-6 mesh-gradient-dark overflow-hidden">
+      <section className="relative py-20 md:py-28 px-6 overflow-hidden bg-gradient-to-br from-brand-teal via-brand-teal-dark to-brand-purple">
         {/* Floating glow orbs */}
         <div className="absolute top-10 left-[15%] w-48 h-48 bg-brand-teal/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-10 right-[10%] w-40 h-40 bg-brand-purple/10 rounded-full blur-3xl animate-float-delayed" />
@@ -737,15 +744,15 @@ export default function CollWiersPage() {
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           <FadeIn>
             {/* Animated gradient border around quote */}
-            <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-brand-teal/40 via-brand-purple/40 to-brand-coral/40" style={{ backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease-in-out infinite' }}>
-              <div className="bg-brand-navy/80 backdrop-blur-xl rounded-3xl py-12 px-8 md:px-12">
-                <p className="text-2xl md:text-3xl font-sans italic text-white/85 mb-6 leading-relaxed">
+            <div className="relative rounded-3xl p-[1px] bg-white/20">
+              <div className="bg-white/15 backdrop-blur-xl rounded-3xl py-12 px-8 md:px-12">
+                <p className="text-2xl md:text-3xl font-sans italic text-white/95 mb-6 leading-relaxed">
                   &ldquo;I know this can&apos;t be all there is&hellip;
                   <br />
                   but I don&apos;t know where to start.&rdquo;
                 </p>
-                <div className="w-12 h-px bg-brand-teal mx-auto mb-6" />
-                <p className="text-lg text-white/50">
+                <div className="w-12 h-px bg-white/40 mx-auto mb-6" />
+                <p className="text-lg text-white/75">
                   You don&apos;t have to know. That&apos;s what we&apos;re here for.
                 </p>
               </div>
