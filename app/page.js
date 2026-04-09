@@ -428,8 +428,8 @@ export default function CollWiersPage() {
               </div>
               <div className="relative h-64 md:h-72 rounded-2xl overflow-hidden shadow-soft-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
-                  alt="Women supporting each other"
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80"
+                  alt="Inspired woman ready for growth"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -688,7 +688,7 @@ export default function CollWiersPage() {
         <div className="relative z-10 max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight break-words hyphens-none">
+              <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight whitespace-normal overflow-visible">
                 You deserve more than{' '}
                 <em className="text-brand-coral italic">&ldquo;fine.&rdquo;</em>
               </h2>

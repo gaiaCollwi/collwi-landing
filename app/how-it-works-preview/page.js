@@ -401,7 +401,7 @@ export default function HowItWorksPreview() {
             />
             <FAQItem
               q="Can I use CollWi on mobile?"
-              a="Yes. CollWi works on desktop, tablet, and mobile. Coaching sessions are held via Zoom, so you'll need the Zoom app for mobile participation."
+              a="Yes. CollWi works on desktop, tablet, and mobile. Coaching sessions are held via secure embedded video conferencing, so you can participate directly from your browser on any device."
               borderColor="border-l-brand-teal"
             />
           </div>
