@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'what-does-a-life-coach-do',
+    title: 'What Does a Life Coach Actually Do? (And Is It Right for You?)',
+    excerpt: 'Thinking about working with a coach but not sure what they actually do? Here\'s an honest, clear breakdown — and how to know if coaching is right for you.',
+    date: '2026-04-10',
+    author: 'CollWi Team',
+    readTime: '7 min read',
+    category: 'Personal Growth',
+  },
+  {
     slug: 'women-community-online',
     title: 'The Best Online Communities for Women in 2026',
     excerpt: 'Finding real connection online is harder than it looks. Here\'s what makes a women\'s community worth joining — and how to find one that actually fits your life.',
