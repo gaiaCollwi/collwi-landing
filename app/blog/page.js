@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'how-to-find-a-coach-for-women',
+    title: 'How to Find the Right Coach for You (A Real Guide for Women)',
+    excerpt: 'The coaching industry has exploded. Thousands of coaches, endless options — so how do you find one who actually fits your life? Here\'s a practical process that works.',
+    date: '2026-04-10',
+    author: 'CollWi Team',
+    readTime: '7 min read',
+    category: 'Personal Growth',
+  },
+  {
     slug: 'feeling-lonely-surrounded-by-people',
     title: 'Why You Feel Lonely Even When Surrounded by People (And What to Do About It)',
     excerpt: 'You can be in a room full of people and still feel completely alone. Here\'s why that happens and how to find real connection.',
