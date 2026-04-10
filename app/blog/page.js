@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'women-community-online',
+    title: 'The Best Online Communities for Women in 2026',
+    excerpt: 'Finding real connection online is harder than it looks. Here\'s what makes a women\'s community worth joining — and how to find one that actually fits your life.',
+    date: '2026-04-10',
+    author: 'CollWi Team',
+    readTime: '8 min read',
+    category: 'Community',
+  },
+  {
     slug: 'how-to-find-a-coach-for-women',
     title: 'How to Find the Right Coach for You (A Real Guide for Women)',
     excerpt: 'The coaching industry has exploded. Thousands of coaches, endless options — so how do you find one who actually fits your life? Here\'s a practical process that works.',
