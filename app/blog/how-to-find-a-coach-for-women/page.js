@@ -91,7 +91,7 @@ export default function HowToFindACoachPage() {
           </p>
 
           <p>
-            At CollWi, we connect women with coaches running group programs — typically 6–10 women working through an 8-week journey together. The coaches keep 82% of what you pay. No inflated platform markups.
+            At CollWi, we connect women with coaches running group programs — typically 6–10 women working through an 8-week journey together.
           </p>
 
           <h2>Step 6: Trust the relationship, not just the content</h2>
