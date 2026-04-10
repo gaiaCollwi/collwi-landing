@@ -9,25 +9,25 @@ export default function AboutPage() {
       title: 'Real Over Perfect',
       desc: "We don't do surface-level positivity or toxic \"good vibes only.\" Growth is messy. We create space for the whole truth, the hard parts and the hopeful parts.",
       accent: 'teal',
-      number: '01',
+      emoji: '✨',
     },
     {
       title: 'Community Over Competition',
       desc: "Your wins don't take away from mine. We believe in collective wisdom, shared experiences, and lifting each other up, not climbing over each other.",
       accent: 'coral',
-      number: '02',
+      emoji: '🤝',
     },
     {
       title: 'Access Over Gatekeeping',
       desc: "Support, growth, and transformation should be accessible to everyone. We're building something inclusive that meets people where they are.",
       accent: 'purple',
-      number: '03',
+      emoji: '🔓',
     },
     {
       title: 'Action Over Consumption',
       desc: "We're not here to sell you another course you'll never finish. You don't need more content, you need clarity, community, and consistent support.",
       accent: 'gold',
-      number: '04',
+      emoji: '🌱',
     },
   ]
 
@@ -215,7 +215,7 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {values.map((value, i) => {
               const style = accentStyles[value.accent]
               return (
@@ -223,20 +223,15 @@ export default function AboutPage() {
                   <div
                     className={`group relative rounded-2xl p-[1px] bg-gradient-to-r ${style.gradient} transition-all duration-300 hover:-translate-y-1 ${style.shadow}`}
                   >
-                    <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl p-8 md:p-10 overflow-hidden">
-                      {/* Large decorative number */}
-                      <span
-                        className={`absolute top-3 right-6 text-[5rem] md:text-[7rem] font-bold leading-none select-none pointer-events-none ${style.numberColor}`}
-                      >
-                        {value.number}
-                      </span>
+                    <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl p-7 md:p-8 overflow-hidden flex items-start gap-5">
+                      {/* Emoji icon */}
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${style.bg} flex items-center justify-center text-2xl mt-0.5`}>
+                        {value.emoji}
+                      </div>
 
-                      {/* Accent dot */}
-                      <div className={`w-3 h-3 rounded-full ${style.bg} ${style.border} border-2 mb-4`} />
-
-                      <div className="relative z-10">
-                        <h3 className={`text-xl font-semibold mb-3 ${style.text}`}>{value.title}</h3>
-                        <p className="text-lg text-brand-navy/60 leading-relaxed max-w-2xl">{value.desc}</p>
+                      <div className="relative z-10 flex-1">
+                        <h3 className={`text-xl font-semibold mb-2 ${style.text}`}>{value.title}</h3>
+                        <p className="text-base text-brand-navy/60 leading-relaxed">{value.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -302,7 +297,7 @@ export default function AboutPage() {
 
       {/* ─── Join Us ─── */}
       <section className="relative py-28 md:py-36 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-teal via-brand-teal-dark to-brand-purple" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-teal via-brand-coral/80 to-brand-teal-dark" />
 
         {/* Animated pulsing orbs */}
         <div className="absolute inset-0 opacity-10">
@@ -321,8 +316,9 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-lg md:text-xl text-white/80 mb-12">
-              Thousands of women are already walking this path together. 
-              What&apos;s waiting for you on the other side of &ldquo;I can&apos;t do this alone&rdquo;?
+              You don&apos;t have to figure this out alone. Thousands of women have already found
+              their people here &mdash; women who get it, who show up, and who grow together.
+              Your story is waiting to unfold.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
