@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'how-to-stop-people-pleasing',
+    title: 'How to Stop People Pleasing (A Real Guide for Women Who Are Done Being Last)',
+    excerpt: 'People pleasing isn\'t a personality flaw — it\'s a learned strategy. Here\'s how to recognize it in yourself and what actually helps women break the pattern.',
+    date: '2026-04-11',
+    author: 'CollWi Team',
+    readTime: '9 min read',
+    category: 'Personal Growth',
+  },
+  {
     slug: 'burnout-recovery-for-women',
     title: 'Burnout Recovery for Women: What Actually Works (And What Doesn\'t)',
     excerpt: 'Most burnout advice misses the point. Here\'s what actually helps women recover — not perform recovery, but actually come back to themselves.',
