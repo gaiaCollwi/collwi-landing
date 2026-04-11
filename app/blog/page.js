@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'burnout-recovery-for-women',
+    title: 'Burnout Recovery for Women: What Actually Works (And What Doesn\'t)',
+    excerpt: 'Most burnout advice misses the point. Here\'s what actually helps women recover — not perform recovery, but actually come back to themselves.',
+    date: '2026-04-11',
+    author: 'CollWi Team',
+    readTime: '9 min read',
+    category: 'Wellness',
+  },
+  {
     slug: 'what-does-a-life-coach-do',
     title: 'What Does a Life Coach Actually Do? (And Is It Right for You?)',
     excerpt: 'Thinking about working with a coach but not sure what they actually do? Here\'s an honest, clear breakdown — and how to know if coaching is right for you.',
