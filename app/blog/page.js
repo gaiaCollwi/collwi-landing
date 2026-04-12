@@ -6,6 +6,15 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSec
 
 const blogPosts = [
   {
+    slug: 'imposter-syndrome-women',
+    title: 'Imposter Syndrome in Women: Why It Happens and How to Finally Move Past It',
+    excerpt: 'You\'ve earned everything you have. And yet — part of you is still waiting to be found out. Here\'s why imposter syndrome hits women so hard, and what actually helps.',
+    date: '2026-04-12',
+    author: 'CollWi Team',
+    readTime: '8 min read',
+    category: 'Personal Growth',
+  },
+  {
     slug: 'how-to-stop-people-pleasing',
     title: 'How to Stop People Pleasing (A Real Guide for Women Who Are Done Being Last)',
     excerpt: 'People pleasing isn\'t a personality flaw — it\'s a learned strategy. Here\'s how to recognize it in yourself and what actually helps women break the pattern.',
