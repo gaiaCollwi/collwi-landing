@@ -42,24 +42,13 @@ const faqs = [
   },
 ]
 
-const faqBorderColors = [
-  'border-l-brand-teal',
-  'border-l-brand-coral',
-  'border-l-brand-purple',
-  'border-l-brand-gold',
-  'border-l-brand-teal',
-  'border-l-brand-coral',
-  'border-l-brand-purple',
-  'border-l-brand-gold',
-]
-
-function FAQItem({ q, a, index }) {
+function FAQItem({ q, a }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className={`glassmorphism rounded-xl border-l-4 ${faqBorderColors[index % faqBorderColors.length]} mb-4 last:mb-0 transition-all duration-300 hover:shadow-soft`}>
+    <div className="border-b border-gray-100 last:border-0">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-6 px-6 text-left group"
+        className="w-full flex items-center justify-between py-6 text-left group"
       >
         <span className="text-lg font-semibold text-brand-navy/80 group-hover:text-brand-navy pr-4 transition-colors">
           {q}
@@ -76,26 +65,7 @@ function FAQItem({ q, a, index }) {
           open ? 'max-h-96 pb-6' : 'max-h-0'
         }`}
       >
-        <p className="text-brand-navy/55 leading-relaxed px-6 pr-12">{a}</p>
-      </div>
-    </div>
-  )
-}
-
-/* Floating decorative orb */
-function FloatingOrb({ className }) {
-  return <div className={`absolute rounded-full blur-3xl pointer-events-none ${className}`} />
-}
-
-/* Decorative dots cluster */
-function DecorativeDots({ className }) {
-  return (
-    <div className={`absolute pointer-events-none ${className}`}>
-      <div className="relative">
-        <div className="w-2 h-2 rounded-full bg-brand-teal/30 absolute top-0 left-0 animate-pulse-soft" />
-        <div className="w-1.5 h-1.5 rounded-full bg-brand-coral/25 absolute top-4 left-6 animate-pulse-soft" style={{ animationDelay: '1s' }} />
-        <div className="w-2.5 h-2.5 rounded-full bg-brand-purple/20 absolute top-8 left-2 animate-pulse-soft" style={{ animationDelay: '2s' }} />
-        <div className="w-1 h-1 rounded-full bg-brand-gold/30 absolute top-2 left-10 animate-pulse-soft" style={{ animationDelay: '0.5s' }} />
+        <p className="text-brand-navy/55 leading-relaxed pr-8">{a}</p>
       </div>
     </div>
   )
@@ -105,15 +75,12 @@ export default function DetailsPage() {
   return (
     <div className="min-h-screen">
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-20 px-6 overflow-hidden mesh-gradient-intense">
-        <FloatingOrb className="top-20 right-[15%] w-64 h-64 bg-brand-purple/12 animate-float" />
-        <FloatingOrb className="top-40 left-[10%] w-48 h-48 bg-brand-teal/10 animate-float-delayed" />
-        <FloatingOrb className="bottom-10 right-[30%] w-36 h-36 bg-brand-coral/8 animate-float-slow" />
-        <FloatingOrb className="bottom-20 left-[20%] w-56 h-56 bg-brand-gold/8 animate-float" />
+      <section className="relative pt-36 pb-20 px-6 overflow-hidden mesh-gradient">
+        <div className="absolute top-20 right-[15%] w-64 h-64 bg-brand-purple/8 rounded-full blur-3xl animate-float" />
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
-            <span className="inline-block px-5 py-2 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6 shadow-soft">
+            <span className="inline-block px-5 py-2 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6">
               More Details
             </span>
             <h1 className="text-4xl md:text-6xl font-sans font-light leading-tight mb-6">
@@ -130,11 +97,8 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── What Is CollWi ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-cool overflow-hidden">
-        <DecorativeDots className="top-12 right-[8%]" />
-        <FloatingOrb className="bottom-0 left-[5%] w-40 h-40 bg-brand-teal/6 animate-float-slow" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-6">
@@ -171,16 +135,12 @@ export default function DetailsPage() {
               },
             ].map((item, i) => (
               <StaggerItem key={i}>
-                <div className={`glassmorphism rounded-2xl p-8 card-hover h-full border-t-2 ${
-                  item.color === 'teal' ? 'border-t-brand-teal hover:shadow-glow-teal' :
-                  item.color === 'purple' ? 'border-t-brand-purple hover:shadow-glow-purple' :
-                  'border-t-brand-coral hover:shadow-glow-coral'
-                }`}>
+                <div className="bg-surface-warm rounded-2xl p-8 card-hover h-full">
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-                      item.color === 'teal' ? 'bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 text-brand-teal' :
-                      item.color === 'purple' ? 'bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 text-brand-purple' :
-                      'bg-gradient-to-br from-brand-coral/20 to-brand-coral/5 text-brand-coral'
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                      item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
+                      item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                      'bg-brand-coral/10 text-brand-coral'
                     }`}
                   >
                     {item.icon}
@@ -194,22 +154,9 @@ export default function DetailsPage() {
         </div>
       </section>
 
-      {/* Decorative divider */}
-      <div className="relative h-16 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 flex justify-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-brand-teal/30 animate-pulse-soft" />
-          <div className="w-2 h-2 rounded-full bg-brand-purple/25 animate-pulse-soft" style={{ animationDelay: '1s' }} />
-          <div className="w-2 h-2 rounded-full bg-brand-coral/20 animate-pulse-soft" style={{ animationDelay: '2s' }} />
-        </div>
-      </div>
-
       {/* ─── A Space Where You Can Be Yourself ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-warm overflow-hidden">
-        <FloatingOrb className="top-20 right-[10%] w-48 h-48 bg-brand-coral/8 animate-float" />
-        <FloatingOrb className="bottom-10 left-[8%] w-36 h-36 bg-brand-purple/6 animate-float-delayed" />
-        <DecorativeDots className="bottom-20 right-[12%]" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-br from-brand-teal/5 via-white to-brand-purple/5">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-6">
@@ -245,17 +192,13 @@ export default function DetailsPage() {
               },
             ].map((item, i) => (
               <StaggerItem key={i}>
-                <div className={`glassmorphism rounded-2xl p-8 shadow-soft card-hover border-l-4 ${
-                  item.color === 'teal' ? 'border-l-brand-teal hover:shadow-glow-teal' :
-                  item.color === 'purple' ? 'border-l-brand-purple hover:shadow-glow-purple' :
-                  'border-l-brand-coral hover:shadow-glow-coral'
-                }`}>
+                <div className="bg-white rounded-2xl p-8 shadow-soft card-hover">
                   <div className="flex items-start gap-6">
                     <div
                       className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center ${
-                        item.color === 'teal' ? 'bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 text-brand-teal' :
-                        item.color === 'purple' ? 'bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 text-brand-purple' :
-                        'bg-gradient-to-br from-brand-coral/20 to-brand-coral/5 text-brand-coral'
+                        item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
+                        item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                        'bg-brand-coral/10 text-brand-coral'
                       }`}
                     >
                       {item.icon}
@@ -277,10 +220,8 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── CTA Break ─── */}
-      <section className="relative py-14 px-6 overflow-hidden" style={{
-        background: 'radial-gradient(ellipse at 30% 50%, rgba(78, 205, 196, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(124, 92, 191, 0.08) 0%, transparent 60%), #F0F9F8'
-      }}>
-        <div className="max-w-2xl mx-auto text-center relative z-10">
+      <section className="py-14 px-6 bg-brand-teal/5">
+        <div className="max-w-2xl mx-auto text-center">
           <FadeIn>
             <p className="text-xl text-brand-navy/60 mb-5">
               Sound like what you&apos;ve been looking for?
@@ -297,14 +238,11 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── How Sessions Work ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-cool overflow-hidden">
-        <FloatingOrb className="top-10 left-[5%] w-40 h-40 bg-brand-teal/6 animate-float-slow" />
-        <DecorativeDots className="top-20 right-[5%]" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5 shadow-soft">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Session Structure
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight">
@@ -322,8 +260,8 @@ export default function DetailsPage() {
                   { icon: <Users size={20} />, title: '8\u201312 participants', desc: 'Small enough that everyone gets time and attention' },
                   { icon: <Shield size={20} />, title: 'Emotionally safe', desc: 'Clear guidelines and a coach who creates a judgment-free zone' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 glassmorphism rounded-xl p-4 card-hover">
-                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 rounded-xl flex items-center justify-center text-brand-teal">
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-teal/10 rounded-xl flex items-center justify-center text-brand-teal">
                       {item.icon}
                     </div>
                     <div>
@@ -336,7 +274,7 @@ export default function DetailsPage() {
             </FadeIn>
 
             <ScaleIn delay={0.2}>
-              <div className="glassmorphism rounded-2xl p-8 md:p-10 h-full border-t-2 border-t-brand-teal/30">
+              <div className="bg-surface-warm rounded-2xl p-8 md:p-10 h-full">
                 <h3 className="text-xl font-bold mb-6">A typical session includes:</h3>
                 <div className="space-y-4">
                   {[
@@ -346,7 +284,7 @@ export default function DetailsPage() {
                     { time: 'Closing', desc: 'Key takeaways and intentions for the week ahead' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-brand-teal to-brand-teal-dark mt-2.5" />
+                      <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-teal mt-2.5" />
                       <div>
                         <span className="font-semibold text-brand-navy/70">{item.time}: </span>
                         <span className="text-brand-navy/50">{item.desc}</span>
@@ -360,25 +298,12 @@ export default function DetailsPage() {
         </div>
       </section>
 
-      {/* Decorative divider */}
-      <div className="relative h-16 overflow-hidden">
-        <div className="absolute inset-x-0 top-4 flex justify-center gap-4">
-          <div className="w-1.5 h-1.5 rounded-full bg-brand-purple/30 animate-pulse-soft" />
-          <div className="w-2 h-2 rounded-full bg-brand-teal/25 animate-pulse-soft" style={{ animationDelay: '0.7s' }} />
-          <div className="w-1.5 h-1.5 rounded-full bg-brand-gold/30 animate-pulse-soft" style={{ animationDelay: '1.4s' }} />
-        </div>
-      </div>
-
       {/* ─── Between Sessions ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-purple overflow-hidden">
-        <FloatingOrb className="top-16 right-[12%] w-52 h-52 bg-brand-purple/8 animate-float" />
-        <FloatingOrb className="bottom-16 left-[8%] w-40 h-40 bg-brand-teal/6 animate-float-delayed" />
-        <DecorativeDots className="top-32 left-[15%]" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 mesh-gradient-intense">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5 shadow-soft">
+              <span className="inline-block px-4 py-1.5 bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Beyond Sessions
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight mb-5">
@@ -419,18 +344,13 @@ export default function DetailsPage() {
               },
             ].map((item, i) => (
               <StaggerItem key={i}>
-                <div className={`glassmorphism rounded-2xl p-8 card-hover h-full border-b-2 ${
-                  item.color === 'teal' ? 'border-b-brand-teal hover:shadow-glow-teal' :
-                  item.color === 'gold' ? 'border-b-brand-gold' :
-                  item.color === 'purple' ? 'border-b-brand-purple hover:shadow-glow-purple' :
-                  'border-b-brand-coral hover:shadow-glow-coral'
-                }`}>
+                <div className="bg-white rounded-2xl p-8 shadow-soft card-hover h-full">
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-                      item.color === 'teal' ? 'bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 text-brand-teal' :
-                      item.color === 'gold' ? 'bg-gradient-to-br from-brand-gold/20 to-brand-gold/5 text-brand-gold' :
-                      item.color === 'purple' ? 'bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 text-brand-purple' :
-                      'bg-gradient-to-br from-brand-coral/20 to-brand-coral/5 text-brand-coral'
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+                      item.color === 'teal' ? 'bg-brand-teal/10 text-brand-teal' :
+                      item.color === 'gold' ? 'bg-brand-gold/10 text-brand-gold' :
+                      item.color === 'purple' ? 'bg-brand-purple/10 text-brand-purple' :
+                      'bg-brand-coral/10 text-brand-coral'
                     }`}
                   >
                     {item.icon}
@@ -445,10 +365,8 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── CTA Break ─── */}
-      <section className="relative py-14 px-6 overflow-hidden" style={{
-        background: 'radial-gradient(ellipse at 40% 50%, rgba(78, 205, 196, 0.10) 0%, transparent 60%), radial-gradient(ellipse at 60% 50%, rgba(244, 132, 95, 0.06) 0%, transparent 60%), #F0F9F8'
-      }}>
-        <div className="max-w-2xl mx-auto text-center relative z-10">
+      <section className="py-14 px-6 bg-brand-teal/5">
+        <div className="max-w-2xl mx-auto text-center">
           <FadeIn>
             <p className="text-xl text-brand-navy/60 mb-5">
               Ready to experience it for yourself?
@@ -465,15 +383,11 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── The CollWi Difference ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-warm overflow-hidden">
-        <FloatingOrb className="top-10 left-[10%] w-44 h-44 bg-brand-coral/8 animate-float" />
-        <FloatingOrb className="bottom-20 right-[8%] w-36 h-36 bg-brand-gold/8 animate-float-delayed" />
-        <DecorativeDots className="top-16 right-[15%]" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5 shadow-soft">
+              <span className="inline-block px-4 py-1.5 bg-brand-coral/10 text-brand-coral text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 The Difference
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-light leading-tight">
@@ -485,7 +399,7 @@ export default function DetailsPage() {
           </FadeIn>
 
           <ScaleIn delay={0.1}>
-            <div className="glassmorphism rounded-3xl p-8 md:p-12 shadow-soft-lg">
+            <div className="bg-surface-warm rounded-3xl p-8 md:p-12">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 {[
                   {
@@ -506,10 +420,10 @@ export default function DetailsPage() {
                 ].map((col, i) => (
                   <div
                     key={i}
-                    className={`rounded-2xl p-6 transition-all duration-300 ${
+                    className={`rounded-2xl p-6 ${
                       col.highlight
-                        ? 'bg-white shadow-soft-lg border-2 border-brand-teal/30 hover:shadow-glow-teal'
-                        : 'hover:bg-white/50'
+                        ? 'bg-white shadow-soft-lg border-2 border-brand-teal/20'
+                        : ''
                     }`}
                   >
                     <h3
@@ -542,14 +456,11 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── How to Get Started ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-cool overflow-hidden">
-        <FloatingOrb className="top-12 right-[10%] w-48 h-48 bg-brand-teal/8 animate-float" />
-        <FloatingOrb className="bottom-12 left-[10%] w-36 h-36 bg-brand-purple/6 animate-float-delayed" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-surface-warm">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5 shadow-soft">
+              <span className="inline-block px-4 py-1.5 bg-brand-teal/10 text-brand-teal text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 Getting Started
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-light">
@@ -558,10 +469,7 @@ export default function DetailsPage() {
             </div>
           </FadeIn>
 
-          <div className="relative space-y-5 max-w-2xl mx-auto">
-            {/* Connecting line */}
-            <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-brand-teal/30 via-brand-purple/20 to-brand-coral/30 rounded-full hidden md:block" />
-
+          <div className="space-y-5 max-w-2xl mx-auto">
             {[
               {
                 num: '1',
@@ -585,8 +493,8 @@ export default function DetailsPage() {
               },
             ].map((step, i) => (
               <FadeIn key={i} delay={i * 0.08}>
-                <div className="flex items-center gap-6 p-6 glassmorphism rounded-2xl shadow-soft card-hover relative">
-                  <span className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark flex items-center justify-center text-2xl font-bold text-white shadow-teal relative z-10">
+                <div className="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-soft card-hover">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center text-xl font-bold text-brand-teal">
                     {step.num}
                   </span>
                   <div>
@@ -601,15 +509,11 @@ export default function DetailsPage() {
       </section>
 
       {/* ─── FAQs ─── */}
-      <section className="relative py-24 md:py-32 px-6 mesh-gradient-warm overflow-hidden">
-        <FloatingOrb className="top-20 left-[8%] w-44 h-44 bg-brand-gold/8 animate-float" />
-        <FloatingOrb className="bottom-20 right-[12%] w-36 h-36 bg-brand-coral/6 animate-float-delayed" />
-        <DecorativeDots className="top-24 right-[10%]" />
-
-        <div className="relative z-10 max-w-3xl mx-auto">
+      <section className="py-24 md:py-32 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 bg-brand-gold/15 text-brand-gold text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5 shadow-soft">
+              <span className="inline-block px-4 py-1.5 bg-brand-gold/15 text-brand-gold text-xs font-bold tracking-[0.15em] uppercase rounded-full mb-5">
                 FAQs
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-light">
@@ -619,9 +523,9 @@ export default function DetailsPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div>
+            <div className="bg-surface-warm rounded-3xl p-6 md:p-10">
               {faqs.map((faq, i) => (
-                <FAQItem key={i} q={faq.q} a={faq.a} index={i} />
+                <FAQItem key={i} q={faq.q} a={faq.a} />
               ))}
             </div>
           </FadeIn>
@@ -635,8 +539,6 @@ export default function DetailsPage() {
           <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-20 w-48 h-48 bg-brand-gold rounded-full blur-3xl" />
         </div>
-        <FloatingOrb className="top-20 left-[15%] w-32 h-32 bg-white/10 animate-float" />
-        <FloatingOrb className="bottom-16 right-[20%] w-24 h-24 bg-brand-gold/15 animate-float-delayed" />
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <FadeIn>
