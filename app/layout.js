@@ -1,11 +1,26 @@
-import { Outfit } from 'next/font/google'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { Outfit, Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
 const outfit = Outfit({
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   variable: '--font-outfit',
+  display: 'swap',
+})
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  variable: '--font-jakarta',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
@@ -144,7 +159,7 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang="en" className={outfit.variable}>
+    <html lang="en" className={`${outfit.variable} ${jakarta.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -160,9 +175,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-sans overflow-x-hidden">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )

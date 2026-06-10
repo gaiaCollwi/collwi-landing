@@ -3,7 +3,7 @@
 import { ArrowLeft, Calendar, User, Share2 } from 'lucide-react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import { FadeIn } from '../../components/AnimatedSection'
+import { FadeIn } from '@/app/components/AnimatedSection'
 
 // Blog post data - in a real app this would come from a CMS or database
 const blogPosts = {

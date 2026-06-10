@@ -2,7 +2,7 @@
 
 import { ArrowRight, Calendar, User } from 'lucide-react'
 import Link from 'next/link'
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
+import { FadeIn, StaggerContainer, StaggerItem } from '@/app/components/AnimatedSection'
 
 const blogPosts = [
   {

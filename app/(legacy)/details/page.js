@@ -5,7 +5,7 @@ import {
   ArrowRight, Users, Compass, Shield, Heart, MessageCircle,
   Sprout, Clock, Calendar, ChevronDown, Sparkles,
 } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '../components/AnimatedSection'
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/app/components/AnimatedSection'
 
 const faqs = [
   {

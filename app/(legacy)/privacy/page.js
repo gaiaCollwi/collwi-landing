@@ -1,7 +1,7 @@
 'use client'
 
 import { Shield, Lock, Eye, Globe, UserCheck, Clock, FileText, Baby, Plane, RefreshCw } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
+import { FadeIn, StaggerContainer, StaggerItem } from '@/app/components/AnimatedSection'
 
 const sections = [
   {
